@@ -304,7 +304,7 @@ function () {
   _createClass(PageList, [{
     key: "render",
     value: function render() {
-      return "\n            <div class=\"container\">\n                <ul>\n                    <li><a href=\"?page=preloader\">\u041F\u0440\u0435\u043B\u043E\u0430\u0434\u0435\u0440</a></li>\n                </ul>\n            </div>\n            \n        ";
+      return "\n            <div class=\"container\">\n                <ul>\n                    <li><a href=\"?page=preloader\">\u041F\u0440\u0435\u043B\u043E\u0430\u0434\u0435\u0440</a></li>\n                </ul>\n            </div>\n        ";
     }
   }]);
 
@@ -345,7 +345,6 @@ var pages = {
   pageList: new _containers.PageList(),
   preloader: new _containers.Preloader()
 };
-console.log('pages.pageList', pages.pageList);
 appContainer.innerHTML = pages[pageName].render();
 appContainer.setAttribute('data-page', pageName);
 },{"./theme/styles.scss":"src/theme/styles.scss","./instruments/helpers":"src/instruments/helpers.js","./containers":"src/containers/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

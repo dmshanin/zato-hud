@@ -273,21 +273,64 @@ function () {
 }();
 
 exports.default = Preloader;
-},{"./styles.scss":"src/containers/Preloader/styles.scss","./svg":"src/containers/Preloader/svg/index.js"}],"src/containers/index.js":[function(require,module,exports) {
+},{"./styles.scss":"src/containers/Preloader/styles.scss","./svg":"src/containers/Preloader/svg/index.js"}],"src/containers/PageList/styles.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/containers/PageList/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Preloader = void 0;
+exports.default = void 0;
+
+require("./styles.scss");
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var PageList =
+/*#__PURE__*/
+function () {
+  function PageList() {
+    _classCallCheck(this, PageList);
+  }
+
+  _createClass(PageList, [{
+    key: "render",
+    value: function render() {
+      return "\n            <div class=\"container\">\n                <ul>\n                    <li><a href=\"?page=preloader\">\u041F\u0440\u0435\u043B\u043E\u0430\u0434\u0435\u0440</a></li>\n                </ul>\n            </div>\n            \n        ";
+    }
+  }]);
+
+  return PageList;
+}();
+
+exports.default = PageList;
+},{"./styles.scss":"src/containers/PageList/styles.scss"}],"src/containers/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PageList = exports.Preloader = void 0;
 
 var _Preloader2 = _interopRequireDefault(require("./Preloader"));
+
+var _PageList2 = _interopRequireDefault(require("./PageList"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Preloader = _Preloader2.default;
 exports.Preloader = Preloader;
-},{"./Preloader":"src/containers/Preloader/index.js"}],"src/index.js":[function(require,module,exports) {
+var PageList = _PageList2.default;
+exports.PageList = PageList;
+},{"./Preloader":"src/containers/Preloader/index.js","./PageList":"src/containers/PageList/index.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 require("./theme/styles.scss");
@@ -297,10 +340,12 @@ var _helpers = require("./instruments/helpers");
 var _containers = require("./containers");
 
 var appContainer = document.getElementById("app");
-var pageName = (0, _helpers.findGetParameter)('page');
+var pageName = (0, _helpers.findGetParameter)('page') || 'pageList';
 var pages = {
+  pageList: new _containers.PageList(),
   preloader: new _containers.Preloader()
 };
+console.log('pages.pageList', pages.pageList);
 appContainer.innerHTML = pages[pageName].render();
 appContainer.setAttribute('data-page', pageName);
 },{"./theme/styles.scss":"src/theme/styles.scss","./instruments/helpers":"src/instruments/helpers.js","./containers":"src/containers/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -331,7 +376,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54082" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

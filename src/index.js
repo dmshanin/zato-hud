@@ -1,11 +1,12 @@
 import "./theme/styles.scss";
 import { findGetParameter } from "./instruments/helpers"
-import { Preloader } from "./containers";
+import { Preloader, PageList } from "./containers";
 
 const appContainer = document.getElementById("app");
-const pageName = findGetParameter('page');
+const pageName = findGetParameter('page') || 'pageList';
 
 const pages = {
+    pageList: new PageList(),
     preloader: new Preloader()
 };
 

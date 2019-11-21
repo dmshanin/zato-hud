@@ -1,0 +1,28 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  min-width: 100%;
+  display: flex;
+  align-content: center;
+}
+
+.container {
+  width: 350px;
+  min-height: 300px;
+  margin: auto;
+  background-color: rgba(white, .95);
+  box-shadow: 0 0 30px rgba(black, .25);
+}
+
+ul {
+  //list-style: none;
+  padding: 20px 40px;
+}
+
+a {
+  color: black;
+}

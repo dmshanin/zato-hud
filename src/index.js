@@ -1,13 +1,14 @@
 import "./theme/styles.scss";
 import { findGetParameter } from "./instruments/helpers"
-import { Preloader, PageList } from "./containers";
+import { Preloader, PageList, Home } from "./containers";
 
 const appContainer = document.getElementById("app");
 const pageName = findGetParameter('page') || 'pageList';
 
 const pages = {
     pageList: new PageList(),
-    preloader: new Preloader()
+    preloader: new Preloader(),
+    homepage: new Home()
 };
 
 appContainer.innerHTML = pages[pageName].render();

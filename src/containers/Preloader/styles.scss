@@ -4,11 +4,19 @@ $preloader-size: 591px;
 $preloader-color: #ffffff;
 
 .com-preloader {
-  width: $preloader-size;
-  height: $preloader-size;
-  color: $preloader-color;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#2D9CDB, #122436);
 
-  @extend %position-absolute-centered;
+  &__wrapper {
+    width: $preloader-size;
+    height: $preloader-size;
+    color: $preloader-color;
+    z-index: 10;
+
+    @extend %position-absolute-centered;
+  }
 
   &__circles {
     position: relative;
@@ -92,7 +100,8 @@ $preloader-color: #ffffff;
   }
 
   &__decor-top,
-  &__decor-bottom {
+  &__decor-bottom,
+  &__decor-wave {
     position: absolute;
     right: 0;
     left: 0;
@@ -105,6 +114,11 @@ $preloader-color: #ffffff;
 
   &__decor-bottom {
     bottom: -85px;
+  }
+
+  &__decor-wave {
+    bottom: 0;
+    z-index: 1;
   }
 }
 

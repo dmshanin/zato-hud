@@ -1,8 +1,7 @@
 {
-//  "modules": true,
   "plugins": {
     "autoprefixer": {
-      "overrideBrowserslist": ['> .05% in RU', 'not ie <= 10']
+      "grid": true
     }
   }
 }

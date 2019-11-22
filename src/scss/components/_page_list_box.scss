@@ -1,0 +1,22 @@
+.plb {
+  height: 100%;
+  display: flex;
+  background: radial-gradient(#2d9cdb, #122436);
+
+  &__container {
+    line-height: 1.4;
+    width: 350px;
+    min-height: 300px;
+    margin: auto;
+    background-color: rgba(white, 0.95);
+    box-shadow: 0 0 30px rgba(black, 0.25);
+
+    ul {
+      padding: 20px 40px;
+    }
+
+    a {
+      color: black;
+    }
+  }
+}

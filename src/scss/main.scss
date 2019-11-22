@@ -1,0 +1,15 @@
+@import 'node_modules/modern-normalize/modern-normalize';
+
+// Переменные, глобальные стили, типография, цвета и т.д.
+@import 'base/variables';
+@import 'base/colors';
+@import 'base/animations';
+@import 'base/extensions';
+
+// Содержит стили для основных компонентов макета, таких как хедер, футер, навигация и т.д.
+@import 'layout/general';
+
+// содержит отдельные компоненты с отдельным файлом .scss для каждого из них
+@import 'components/page_list_box';
+@import 'components/preloader';
+@import 'components/main';

@@ -1,0 +1,130 @@
+.hud-main {
+  &__bg,
+  &__bg__video,
+  &__bg__decor-top,
+  &__bg__decor-bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  &__bg,
+  &__bg__video,
+  &__bg__decor-top {
+    top: 0;
+  }
+
+  &__bg,
+  &__bg__video,
+  &__bg__decor-bottom {
+    bottom: 0;
+  }
+
+  &__bg {
+    z-index: 0;
+
+    &__video {
+      background: transparent url('../assets/bg.jpg') no-repeat center / cover;
+    }
+
+    &__decor-top,
+    &__decor-bottom {
+      height: 379px;
+
+      &:before {
+        content: '';
+        height: 278px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background: transparent url('../assets/squares.png') no-repeat center / cover;
+      }
+    }
+
+    &__decor-top {
+      background: linear-gradient(0deg, rgba(45, 156, 219, 0) 9.24%, #122436 85.71%);
+
+      &:before {
+        top: -88px;
+        transform: rotate(180deg);
+      }
+    }
+
+    &__decor-bottom {
+      background: linear-gradient(180deg, rgba(45, 156, 219, 0) 1.54%, #122436 70.98%);
+
+      &:before {
+        bottom: -76px;
+      }
+    }
+  }
+
+  &__header,
+  &__footer {
+    position: relative;
+
+    &__decor {
+      &__container {
+        width: 1320px;
+        margin: auto;
+        position: relative;
+        top: 20px;
+      }
+
+      &__row-center,
+      &__row-space-between {
+        display: flex;
+      }
+
+      &__row-center {
+        justify-content: center;
+      }
+
+      &__row-space-between {
+        justify-content: space-between;
+      }
+
+      &__row-2,
+      &__row-3,
+      &__row-5 {
+        position: absolute;
+        right: 0;
+        left: 0;
+      }
+
+      &__row-2 {
+        top: 25px;
+      }
+
+      &__row-3 {
+        right: -220px;
+        left: -220px;
+        top: 10px;
+      }
+
+      &__row-5 {
+        top: 80px;
+      }
+
+      &__item-reverse {
+        > svg {
+          transform: scale(-1, 1);
+        }
+      }
+    }
+  }
+
+  &__footer {
+    transform: scale(1, -1);
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    left: 0;
+
+    &__decor {
+      &__row-2 {
+        top: 38px;
+      }
+    }
+  }
+}

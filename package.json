@@ -19,6 +19,7 @@
     "test": "test -e dist/index.html && exit 0 || exit 1",
     "gh-pages": "gh-pages -d dist"
   },
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.7.1",
     "cross-env": "^6.0.3",

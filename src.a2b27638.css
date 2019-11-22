@@ -1,3 +1,62 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 html,
 body {
   margin: 0;
@@ -10,9 +69,9 @@ body {
 }
 
 #app {
+  position: relative;
   height: 100%;
   overflow: hidden;
-  background: radial-gradient(#2D9CDB, #122436);
 }
 @keyframes sizeFlicker275 {
   0% {
@@ -56,9 +115,16 @@ body {
   }
 }
 .com-preloader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#2D9CDB, #122436);
+}
+.com-preloader__wrapper {
   width: 591px;
   height: 591px;
   color: #ffffff;
+  z-index: 10;
 }
 .com-preloader__circles {
   position: relative;
@@ -112,7 +178,7 @@ body {
   display: flex;
   animation: 2s opacity-1-05 0.15s infinite linear;
 }
-.com-preloader__decor-top, .com-preloader__decor-bottom {
+.com-preloader__decor-top, .com-preloader__decor-bottom, .com-preloader__decor-wave {
   position: absolute;
   right: 0;
   left: 0;
@@ -124,8 +190,12 @@ body {
 .com-preloader__decor-bottom {
   bottom: -85px;
 }
+.com-preloader__decor-wave {
+  bottom: 0;
+  z-index: 1;
+}
 
-.com-preloader, .com-preloader__circles .dashedCircle2,
+.com-preloader__wrapper, .com-preloader__circles .dashedCircle2,
 .com-preloader__circles .dashedCircle3,
 .com-preloader__circles .dashedCircle4, .com-preloader__logo, .com-preloader__glow {
   position: absolute;
@@ -141,32 +211,122 @@ body {
   align-items: center;
   justify-content: center;
 }
-html,
-body {
-  width: 100%;
+.toc {
   height: 100%;
-}
-
-#app {
-  min-width: 100%;
   display: flex;
-  align-content: center;
+  background: radial-gradient(#2D9CDB, #122436);
 }
-
-.container {
+.toc__container {
+  line-height: 1.4;
   width: 350px;
   min-height: 300px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
-
-ul {
+.toc__container ul {
   padding: 20px 40px;
 }
-
-a {
+.toc__container a {
   color: black;
+}
+.hud__bg, .hud__bg__video, .hud__bg__decor-top, .hud__bg__decor-bottom {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.hud__bg, .hud__bg__video, .hud__bg__decor-top {
+  top: 0;
+}
+.hud__bg, .hud__bg__video, .hud__bg__decor-bottom {
+  bottom: 0;
+}
+.hud__bg {
+  z-index: 0;
+}
+.hud__bg__video {
+  background: transparent url("/bg.c334f0c1.jpg") no-repeat center/cover;
+}
+.hud__bg__decor-top, .hud__bg__decor-bottom {
+  height: 379px;
+}
+.hud__bg__decor-top:before, .hud__bg__decor-bottom:before {
+  content: "";
+  height: 278px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: transparent url("/squares.1c87a063.png") no-repeat center/cover;
+}
+.hud__bg__decor-top {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(9.24%, rgba(45, 156, 219, 0)), color-stop(85.71%, #122436));
+  background: -webkit-linear-gradient(bottom, rgba(45, 156, 219, 0) 9.24%, #122436 85.71%);
+  background: linear-gradient(0deg, rgba(45, 156, 219, 0) 9.24%, #122436 85.71%);
+}
+.hud__bg__decor-top:before {
+  top: -88px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.hud__bg__decor-bottom {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1.54%, rgba(45, 156, 219, 0)), color-stop(70.98%, #122436));
+  background: -webkit-linear-gradient(top, rgba(45, 156, 219, 0) 1.54%, #122436 70.98%);
+  background: linear-gradient(180deg, rgba(45, 156, 219, 0) 1.54%, #122436 70.98%);
+}
+.hud__bg__decor-bottom:before {
+  bottom: -76px;
+}
+.hud__header, .hud__footer {
+  position: relative;
+}
+.hud__header__decor__container, .hud__footer__decor__container {
+  width: 1320px;
+  margin: auto;
+  position: relative;
+  top: 20px;
+}
+.hud__header__decor__row-center, .hud__header__decor__row-space-between, .hud__footer__decor__row-center, .hud__footer__decor__row-space-between {
+  display: -webkit-box;
+  display: flex;
+}
+.hud__header__decor__row-center, .hud__footer__decor__row-center {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.hud__header__decor__row-space-between, .hud__footer__decor__row-space-between {
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.hud__header__decor__row-2, .hud__header__decor__row-3, .hud__header__decor__row-5, .hud__footer__decor__row-2, .hud__footer__decor__row-3, .hud__footer__decor__row-5 {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.hud__header__decor__row-2, .hud__footer__decor__row-2 {
+  top: 25px;
+}
+.hud__header__decor__row-3, .hud__footer__decor__row-3 {
+  right: -220px;
+  left: -220px;
+  top: 10px;
+}
+.hud__header__decor__row-5, .hud__footer__decor__row-5 {
+  top: 80px;
+}
+.hud__header__decor__item-reverse > svg, .hud__footer__decor__item-reverse > svg {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+.hud__footer {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  left: 0;
+}
+.hud__footer__decor__row-2 {
+  top: 38px;
 }
 
 /*# sourceMappingURL=/src.a2b27638.css.map */

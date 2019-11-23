@@ -19,9 +19,9 @@
 <body class="{% block bodyClass %}{% endblock %}">
 {% include "html/partials/_header.njk" %}
 
-<main class="main">
+<section class="page-section" id="app">
   {% block content %}{% endblock %}
-</main>
+</section>
 
 {% include "html/partials/_footer.njk" %}
 

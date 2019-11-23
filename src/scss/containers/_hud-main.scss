@@ -1,4 +1,6 @@
 .hud-main {
+  height: 100%;
+
   &__bg,
   &__bg__video,
   &__bg__decor-top,
@@ -62,6 +64,8 @@
   &__header,
   &__footer {
     position: relative;
+    z-index: 10;
+    height: 379px;
 
     &__decor {
       &__container {
@@ -124,6 +128,99 @@
     &__decor {
       &__row-2 {
         top: 38px;
+      }
+    }
+  }
+
+  &__sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 15;
+    width: 379px;
+
+    &-left {
+      left: 0;
+
+      .btn {
+        font-size: 267px;
+        color: white;
+        position: absolute;
+        top: 344px;
+        right: 34px;
+      }
+
+      &__decor {
+        position: absolute;
+
+        svg {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        &-1 {
+          width: 46px;
+          top: 132px;
+          right: 229px;
+        }
+
+        &-2 {
+          width: 27px;
+          top: 122px;
+          right: 178px;
+        }
+      }
+    }
+
+    &-right {
+      right: 0;
+
+      &__decor {
+        position: absolute;
+
+        svg {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        &-1 {
+          width: 27px;
+          top: 155px;
+          left: 143px;
+        }
+
+        &-2 {
+          width: 78px;
+          top: 135px;
+          left: 195px;
+        }
+
+        &-3 {
+          width: 64px;
+          top: 295px;
+          left: 204px;
+        }
+
+        &-4 {
+          width: 122px;
+          top: 408px;
+          left: 171px;
+        }
+
+        &-5 {
+          width: 72px;
+          top: 536px;
+          left: 178px;
+          transform: scale(-1, -1);
+        }
+
+        &-6 {
+          width: 33px; // 33.83
+          top: 655px;
+          left: 232px;
+        }
       }
     }
   }

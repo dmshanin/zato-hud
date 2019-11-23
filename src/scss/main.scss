@@ -10,6 +10,9 @@
 @import 'layout/general';
 
 // содержит отдельные компоненты с отдельным файлом .scss для каждого из них
-@import 'components/page_list_box';
-@import 'components/preloader';
-@import 'components/main';
+@import 'components/buttons';
+
+// основные контейнеры
+@import 'containers/page_list_box';
+@import 'containers/preloader';
+@import 'containers/hud-main';

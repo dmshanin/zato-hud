@@ -1,25 +1,18 @@
 <svg width="133" height="91" viewBox="0 0 133 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g filter="url(#filter01_d)">
-    <path
-      d="M80.3465 10H108.782L123 34.616L108.782 59.2319H80.3465L66.1286 34.616L80.3465 10ZM108.358 10.6366H80.6648L66.8714 34.616L80.6648 58.5953H108.358L122.151 34.616L108.358 10.6366Z"
-      fill="white"/>
-    <path
-      d="M52.3357 30.9024H80.7714L94.9893 55.5183L80.7714 80.1343H52.3357L38.1179 55.5183L52.3357 30.9024ZM80.347 31.539H52.654L38.8606 55.5183L52.654 79.4977H80.347L94.1404 55.5183L80.347 31.539Z"
-      fill="white"/>
-    <path
-      d="M24.2176 10H52.6532L66.8711 34.616L52.6532 59.2319H24.2176L9.99973 34.616L24.2176 10ZM52.3349 10.6366H24.642L10.8486 34.616L24.642 58.5953H52.3349L66.1284 34.616L52.3349 10.6366Z"
-      fill="white"/>
-  </g>
-  <defs>
-    <filter id="filter01_d" x="0" y="0" width="133" height="90.1343" filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-      <feOffset/>
-      <feGaussianBlur stdDeviation="5"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.596078 0 0 0 0 1 0 0 0 1 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-    </filter>
-  </defs>
+<g filter="url(#filter04_d)">
+<path d="M80.3465 10H108.782L123 34.616L108.782 59.2319H80.3465L66.1286 34.616L80.3465 10ZM108.358 10.6366H80.6648L66.8714 34.616L80.6648 58.5953H108.358L122.151 34.616L108.358 10.6366Z" fill="white"/>
+<path d="M52.3357 30.9024H80.7714L94.9893 55.5183L80.7714 80.1343H52.3357L38.1179 55.5183L52.3357 30.9024ZM80.347 31.539H52.654L38.8606 55.5183L52.654 79.4977H80.347L94.1404 55.5183L80.347 31.539Z" fill="white"/>
+<path d="M24.2176 10H52.6532L66.8711 34.616L52.6532 59.2319H24.2176L9.99973 34.616L24.2176 10ZM52.3349 10.6366H24.642L10.8486 34.616L24.642 58.5953H52.3349L66.1284 34.616L52.3349 10.6366Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter04_d" x="0" y="0" width="133" height="90.1343" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.101961 0 0 0 0 0.596078 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
 </svg>

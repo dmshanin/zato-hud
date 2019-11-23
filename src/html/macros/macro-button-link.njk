@@ -1,0 +1,35 @@
+{% macro buttonLink(href, class, icon, content, circles, glow, pointer) %}
+  <a href="{{ href }}" class="btn btn-{{ class }}">
+    <div class="btn__content">
+      {% if icon %}
+        {% include icon %}
+      {% else %}
+        {{ content  }}
+      {% endif %}
+    </div>
+
+    {% if circles %}
+      <div class="btn__circles">
+        {% for circle in circles %}
+          <div class="btn__circles__item">
+            {% include circle %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if glow %}
+      <div class="btn__glow">
+        {% include glow %}
+      </div>
+    {% endif %}
+
+    {% if pointer %}
+      <div class="btn__pointer">
+        <div class="btn__pointer__line">{% include pointer %}</div>
+        <div class="btn__pointer__label">{{ content }}</div>
+        <div class="btn__pointer__decor">{% include "html/icons/body-decor-3.svg" %}</div>
+      </div>
+    {% endif %}
+  </a>
+{% endmacro %}

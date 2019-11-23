@@ -1,10 +1,10 @@
 <svg width="1321" height="68" viewBox="0 0 1321 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter04_d)">
+<g filter="url(#filter14_d)">
 <path d="M686.457 56.0939L583.525 56.0939L438.223 56.0939L375.028 11.0316L10 11.0316V12.7385L374.07 12.7385L437.266 57.8008L583.525 57.8008L686.457 57.8008L824.338 57.8008L887.294 12.7385L1311 12.7385V11.0316L886.336 11.0316L823.38 56.0939L686.457 56.0939Z" fill="white"/>
 <path d="M625.895 42.0973L449.713 42.0973L405.189 10.5196L403.514 11.7144L448.756 43.8042L625.895 43.8042H644.087L821.226 43.8042L865.271 12.3972L863.835 11.2023L820.268 42.0973L644.087 42.0973H625.895Z" fill="white"/>
 </g>
 <defs>
-<filter id="filter04_d" x="0" y="0.519531" width="1321" height="67.2814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter14_d" x="0" y="0.519531" width="1321" height="67.2814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset/>

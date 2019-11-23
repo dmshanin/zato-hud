@@ -1,0 +1,96 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: currentColor;
+  cursor: pointer;
+
+  &__content {
+    font-size: 0.5em;
+    z-index: 15;
+
+    @extend %position-absolute-full;
+    @extend %display-flex-centered;
+
+    svg {
+      display: block;
+      width: 1em;
+      height: auto;
+    }
+  }
+
+  &__circles {
+    width: 1em;
+    height: 1em;
+    z-index: 10;
+    position: relative;
+
+    @extend %display-flex-centered;
+
+    &__item {
+      position: absolute;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__glow {
+    width: 1em;
+    height: 1em;
+    z-index: 5;
+
+    @extend %position-absolute-full;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__pointer {
+    position: absolute;
+    top: -0.1em;
+    left: 0.225em;
+
+    &__line {
+      width: 0.75em;
+
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__label {
+      font-size: 1rem;
+      text-align: right;
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+    }
+
+    &__decor {
+      position: absolute;
+      right: -5%;
+      bottom: 100%;
+      margin-bottom: 14%;
+
+      svg {
+        display: block;
+        width: 0.3em;
+        height: auto;
+      }
+    }
+  }
+}

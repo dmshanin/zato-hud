@@ -3,6 +3,7 @@
 {% block documentTitle %}Главная{% endblock %}
 
 {% block content %}
+  {% import "html/macros/macro-button-link.njk" as macroButtonLink %}
 
 <div class="hud-main">
   <div class="hud-main__bg">
@@ -47,6 +48,58 @@
           {% include "html/icons/center-decor.svg" %}
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="hud-main__sidebar hud-main__sidebar-left">
+    <div class="hud-main__sidebar-left__decor hud-main__sidebar-left__decor-1">
+      {% include "html/icons/body-decor-1.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-left__decor hud-main__sidebar-left__decor-2">
+      {% include "html/icons/body-decor-2.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar__menu">
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'menu',
+        'html/icons/icon-th.svg',
+        'ОТКРЫТЬ МЕНЮ',
+        [
+          'html/icons/circle-decor-1.svg',
+          'html/icons/circle-decor-2.svg',
+          'html/icons/circle-decor-3.svg'
+        ],
+        'html/icons/radial-glow.svg',
+        'html/icons/pointer-line.svg'
+      ) }}
+    </div>
+  </div>
+
+  <div class="hud-main__sidebar hud-main__sidebar-right">
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-1">
+      {% include "html/icons/body-decor-2.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-2">
+      {% include "html/icons/logo.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-3">
+      {% include "html/icons/body-decor-4.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-4">
+      {% include "html/icons/body-decor-5.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-5">
+      {% include "html/icons/body-decor-3.svg" %}
+    </div>
+
+    <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-6">
+      {% include "html/icons/body-decor-6.svg" %}
     </div>
   </div>
 

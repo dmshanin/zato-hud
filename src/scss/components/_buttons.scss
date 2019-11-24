@@ -48,6 +48,8 @@
     @extend %display-flex-centered;
 
     &__item {
+      @extend %display-flex-centered;
+
       position: absolute;
       width: 100%;
 

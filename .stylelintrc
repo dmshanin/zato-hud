@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-config-recommended-scss"],
   "rules": {
-    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["focus-visible"] }]
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["focus-visible"] }],
+    "no-descending-specificity": null
   }
 }

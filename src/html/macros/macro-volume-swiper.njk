@@ -1,0 +1,16 @@
+{% macro volumeSwiper(value) %}
+  <div class="volume-swiper">
+    <div class="volume-swiper__label">{{ value }}%</div>
+    <div class="volume-swiper__slider">
+      <div class="volume-swiper__slider__empty">{% include "html/icons/volume-swiper.svg" %}</div>
+      <div class="volume-swiper__slider__filled" style="height: {{ value }}%;">{% include "html/icons/volume-swiper.svg" %}</div>
+    </div>
+    <div class="volume-swiper__icon">
+      {% if value > 0 %}
+        {% include "html/icons/icon-volume-on.svg" %}
+      {% else %}
+        {% include "html/icons/icon-volume-off.svg" %}
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

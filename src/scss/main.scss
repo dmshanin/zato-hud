@@ -11,6 +11,8 @@
 
 // содержит отдельные компоненты с отдельным файлом .scss для каждого из них
 @import 'components/buttons';
+@import 'components/volume-swiper';
+@import 'components/nav';
 
 // основные контейнеры
 @import 'containers/page_list_box';

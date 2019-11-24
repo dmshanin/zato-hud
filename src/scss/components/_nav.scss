@@ -1,0 +1,74 @@
+.nav {
+  &__toggler {
+    .btn {
+      font-size: 267px;
+      color: white;
+
+      &__icon {
+        svg {
+          width: 0.775em;
+        }
+      }
+
+      &__circles {
+        &__item:nth-of-type(1) {
+          width: 100%;
+        }
+
+        &__item:nth-of-type(2) {
+          width: 237px;
+        }
+
+        &__item:nth-of-type(3) {
+          width: 204px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    z-index: 1000;
+    display: none;
+
+    @extend %position-absolute-full;
+
+    &.in {
+      display: block;
+    }
+
+    &__overlay {
+      @extend %position-absolute-full;
+    }
+
+    &__wrapper {
+      @extend %position-absolute-centered;
+      @extend %display-flex-centered;
+
+      width: 58%;
+      height: 520px;
+      margin: auto;
+      flex-wrap: wrap;
+      top: 50px;
+
+      .btn {
+        font-size: 150px;
+        margin-right: 48px;
+        margin-left: 48px;
+
+        &__label {
+          font-size: 20px;
+          line-height: 25px;
+        }
+
+        &.nav-item-2,
+        &.nav-item-5,
+        &.nav-item-7 {
+          [class*='__label'] {
+            right: -20px;
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}

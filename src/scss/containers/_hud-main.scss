@@ -142,14 +142,6 @@
     &-left {
       left: 0;
 
-      .btn {
-        font-size: 267px;
-        color: white;
-        position: absolute;
-        top: 344px;
-        right: 34px;
-      }
-
       &__decor {
         position: absolute;
 
@@ -223,5 +215,17 @@
         }
       }
     }
+
+    .volume-swiper {
+      position: absolute;
+      bottom: 69px;
+      left: 70px;
+    }
+  }
+
+  .nav__toggler {
+    position: absolute;
+    top: 324px;
+    right: 34px;
   }
 }

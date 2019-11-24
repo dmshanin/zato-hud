@@ -4,6 +4,7 @@
 
 {% block content %}
   {% import "html/macros/macro-button-link.njk" as macroButtonLink %}
+  {% import "html/macros/macro-volume-swiper.njk" as macroVolumeSwiper %}
 
 <div class="hud-main">
   <div class="hud-main__bg">
@@ -60,12 +61,13 @@
       {% include "html/icons/body-decor-2.svg" %}
     </div>
 
-    <div class="hud-main__sidebar__menu">
+    <div class="nav__toggler">
       {{ macroButtonLink.buttonLink(
         '#',
-        'menu',
+        'nav',
         'html/icons/icon-th.svg',
         'ОТКРЫТЬ МЕНЮ',
+        'pointer',
         [
           'html/icons/circle-decor-1.svg',
           'html/icons/circle-decor-2.svg',
@@ -75,6 +77,8 @@
         'html/icons/pointer-line.svg'
       ) }}
     </div>
+
+    {{ macroVolumeSwiper.volumeSwiper(47) }}
   </div>
 
   <div class="hud-main__sidebar hud-main__sidebar-right">
@@ -101,6 +105,106 @@
     <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-6">
       {% include "html/icons/body-decor-6.svg" %}
     </div>
+  </div>
+
+  <div class="nav__content">
+
+    <div class="nav__content__wrapper">
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-1',
+        'html/icons/icon-building-1.svg',
+        'О заводе «ЗЭТО»',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-2',
+        'html/icons/icon-catalog.svg',
+        'Продукция производства',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-3',
+        'html/icons/icon-tower.svg',
+        'Новая продукция',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-4',
+        'html/icons/icon-diagram.svg',
+        'Проекты «ЗЭТО»',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-5',
+        'html/icons/icon-lighthouse.svg',
+        'Испытательный центр',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-6',
+        'html/icons/icon-light.svg',
+        'Кластер псковский',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'nav-item nav-item-7',
+        'html/icons/icon-building-1.svg',
+        'Технопарк «Электополис»',
+        'bottom',
+        [
+          'html/icons/circle-decor-4.svg',
+          'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      <div class="nav__content__overlay"></div>
+    </div>
+
+    <div class="nav__content__overlay"></div>
   </div>
 
   <div class="hud-main__footer">

@@ -1,0 +1,75 @@
+.volume-swiper {
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__label {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    right: 3px;
+  }
+
+  &__slider {
+    $skew-value: 45deg;
+
+    width: 19px;
+    position: relative;
+    margin-top: 12px;
+
+    &__empty,
+    &__filled {
+      width: 100%;
+      overflow: hidden;
+      transform: skew(0, $skew-value * -1);
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: skew(0, $skew-value);
+      }
+    }
+
+    &__empty {
+      position: relative;
+      z-index: 5;
+
+      svg {
+        fill: white;
+      }
+    }
+
+    &__filled {
+      position: absolute;
+      z-index: 10;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      svg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        fill: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    text-align: left;
+    width: 100%;
+    position: relative;
+    left: 8px;
+    margin-top: 12px;
+
+    svg {
+      display: block;
+      width: auto;
+      height: 30px;
+    }
+  }
+}

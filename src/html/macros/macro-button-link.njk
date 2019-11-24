@@ -31,7 +31,9 @@
     {% if pointer %}
       <div class="btn__pointer">
         <div class="btn__pointer__line">{% include pointer %}</div>
+        {% if content %}
         <div class="btn__pointer__label">{{ content }}</div>
+        {% endif %}
         <div class="btn__pointer__decor">{% include "html/icons/body-decor-3.svg" %}</div>
       </div>
     {% endif %}

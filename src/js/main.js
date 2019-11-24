@@ -1,16 +1,35 @@
 // Menu
 (() => {
-  const navTogglerEl = document.querySelector('.nav__toggler .btn');
+  const navItemEl = document.querySelectorAll('[data-menu-item-parent]');
   const navOverlayEl = document.querySelectorAll('.nav__content__overlay');
   const navContentEl = document.querySelector('.nav__content');
+  const navLinkGroupEl = document.querySelectorAll('.nav__content__link-group');
 
-  navTogglerEl.addEventListener('click', () => {
-    navContentEl.classList.add('in');
+  navItemEl.forEach(item => {
+    item.addEventListener('click', () => {
+      const itemId = item.dataset.id;
+
+      if (itemId === '0') {
+        navContentEl.classList.add('in');
+      }
+
+      navLinkGroupEl.forEach(item => {
+        item.classList.remove('in');
+
+        if (item.dataset.sourceId === itemId) {
+          item.classList.add('in');
+        }
+      });
+    });
   });
 
   navOverlayEl.forEach(item => {
     item.addEventListener('click', () => {
       navContentEl.classList.remove('in');
+
+      navLinkGroupEl.forEach(item => {
+        item.classList.remove('in');
+      });
     });
   });
 })();

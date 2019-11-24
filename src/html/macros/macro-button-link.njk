@@ -1,5 +1,5 @@
-{% macro buttonLink(href, class, icon, content, contentPosition, circles, glow, pointer) %}
-  <a href="{{ href }}" class="btn btn-{{ class }}">
+{% macro buttonLink(href, attr, class, icon, content, contentPosition, circles, glow, pointer) %}
+  <a href="{{ href }}" class="btn btn-{{ class }}" {{ attr }}>
     {% if icon %}
       <div class="btn__icon">
         {% include icon %}

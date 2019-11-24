@@ -185,7 +185,7 @@
         }
 
         &-2 {
-          width: 78px;
+          //width: 78px;
           top: 135px;
           left: 195px;
         }
@@ -203,7 +203,7 @@
         }
 
         &-5 {
-          width: 72px;
+          //width: 72px;
           top: 536px;
           left: 178px;
           transform: scale(-1, -1);
@@ -219,7 +219,7 @@
   }
 
   &__close {
-    font-size: 86px;
+    font-size: 46px;
     position: absolute;
     right: 106px;
     bottom: 61px;
@@ -233,6 +233,10 @@
     position: absolute;
     top: 324px;
     right: 34px;
+
+    .btn {
+      height: 269px;
+    }
   }
 
   .volume-swiper {

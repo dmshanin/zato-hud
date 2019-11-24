@@ -18,21 +18,19 @@
     z-index: 10;
 
     .dashedCircle1 {
-      animation: 100s rotate 0.15s infinite linear, 2s opacity-1-075 0.35s infinite ease-in;
+      @extend %animation__rotate-left-1;
     }
 
     .dashedCircle2 {
-      animation: 250s rotate 0.15s infinite linear;
-      animation-direction: reverse;
+      @extend %animation__rotate-right-2;
     }
 
     .dashedCircle3 {
-      animation: 500s rotate 0.15s infinite linear, 1s opacity-1-075 0.15s infinite ease-in;
+      @extend %animation__rotate-left-4;
     }
 
     .dashedCircle4 {
-      animation: 350s rotate 0.15s infinite linear, 2s opacity-1-075 0.35s infinite ease-in;
-      animation-direction: reverse;
+      @extend %animation__rotate-right-3;
     }
 
     .dashedCircle2,
@@ -56,7 +54,7 @@
     z-index: 5;
 
     .radialGradient {
-      animation: 5s sizeFlicker275 0.15s infinite linear;
+      @extend %animation__size-3;
     }
   }
 
@@ -76,7 +74,7 @@
       right: 0;
       top: 15px;
 
-      animation: 2s opacity-1-05 0.15s infinite linear;
+      @extend %animation__opacity__1-05__2;
     }
 
     &-text {
@@ -86,7 +84,7 @@
       margin-bottom: 0.5em;
       display: flex;
 
-      animation: 2s opacity-1-05 0.15s infinite linear;
+      @extend %animation__opacity__1-05__2;
     }
   }
 

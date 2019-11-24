@@ -1,30 +1,29 @@
 .nav {
   &__toggler {
     .btn {
-      font-size: 267px;
-      color: white;
+      //font-size: 267px;
 
       &__icon {
         svg {
-          width: 0.775em;
+          width: 63px;
         }
       }
 
-      &__circles {
-        &__item {
-          &:nth-of-type(1) {
-            width: 100%;
-          }
-
-          &:nth-of-type(2) {
-            width: 237px;
-          }
-
-          &:nth-of-type(3) {
-            width: 204px;
-          }
-        }
-      }
+      //&__circles {
+      //  &__item {
+      //    &:nth-of-type(1) {
+      //      width: 100%;
+      //    }
+      //
+      //    &:nth-of-type(2) {
+      //      width: 237px;
+      //    }
+      //
+      //    &:nth-of-type(3) {
+      //      width: 204px;
+      //    }
+      //  }
+      //}
     }
   }
 
@@ -42,15 +41,20 @@
       @extend %position-absolute-full;
     }
 
-    &__wrapper {
+    &__link-group {
       @extend %position-absolute-centered;
       @extend %display-flex-centered;
 
-      width: 58%;
+      display: none;
+      width: 63%;
       height: 520px;
       margin: auto;
       flex-wrap: wrap;
       top: 50px;
+
+      &.in {
+        display: flex;
+      }
 
       .btn {
         font-size: 150px;
@@ -62,17 +66,17 @@
           line-height: 25px;
         }
 
-        &__circles {
-          &__item {
-            &:nth-of-type(1) {
-              width: 170px;
-            }
-
-            &:nth-of-type(2) {
-              width: 110px;
-            }
-          }
-        }
+        //&__circles {
+        //  &__item {
+        //    &:nth-of-type(1) {
+        //      width: 150px;
+        //    }
+        //
+        //    &:nth-of-type(2) {
+        //      width: 110px;
+        //    }
+        //  }
+        //}
 
         &.nav-item-2,
         &.nav-item-5,

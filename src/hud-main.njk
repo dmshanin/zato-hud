@@ -64,6 +64,7 @@
     <div class="nav__toggler">
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=0 data-menu-item-parent',
         'nav',
         'html/icons/icon-th.svg',
         'ОТКРЫТЬ МЕНЮ',
@@ -73,8 +74,8 @@
           'html/icons/circle-decor-2.svg',
           'html/icons/circle-decor-3.svg'
         ],
-        'html/icons/radial-glow.svg',
-        'html/icons/pointer-line.svg'
+        'html/icons/radial-glow-2.svg',
+        'html/icons/pointer-line-1.svg'
       ) }}
     </div>
   </div>
@@ -85,7 +86,7 @@
     </div>
 
     <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-2">
-      {% include "html/icons/logo.svg" %}
+      {% include "html/icons/logo-sm.svg" %}
     </div>
 
     <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-3">
@@ -97,7 +98,7 @@
     </div>
 
     <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-5">
-      {% include "html/icons/body-decor-3.svg" %}
+      {% include "html/icons/body-decor-7.svg" %}
     </div>
 
     <div class="hud-main__sidebar-right__decor hud-main__sidebar-right__decor-6">
@@ -109,9 +110,10 @@
   {{ macroVolumeSwiper.volumeSwiper(47) }}
 
   <div class="nav__content">
-    <div class="nav__content__wrapper">
+    <div class="nav__content__link-group" data-source-id="0">
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=1 data-menu-item-parent',
         'nav-item nav-item-1',
         'html/icons/icon-building.svg',
         'О заводе «ЗЭТО»',
@@ -120,11 +122,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=2 data-menu-item',
         'nav-item nav-item-2',
         'html/icons/icon-catalog.svg',
         'Продукция производства',
@@ -133,11 +136,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=3 data-menu-item',
         'nav-item nav-item-3',
         'html/icons/icon-tower.svg',
         'Новая продукция',
@@ -146,11 +150,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=4 data-menu-item',
         'nav-item nav-item-4',
         'html/icons/icon-diagram.svg',
         'Проекты «ЗЭТО»',
@@ -159,11 +164,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=5 data-menu-item',
         'nav-item nav-item-5',
         'html/icons/icon-lighthouse.svg',
         'Испытательный центр',
@@ -172,11 +178,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=6 data-menu-item',
         'nav-item nav-item-6',
         'html/icons/icon-light.svg',
         'Кластер псковский',
@@ -185,11 +192,12 @@
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
         ],
-        'html/icons/radial-glow.svg'
+        'html/icons/radial-glow-1.svg'
       ) }}
 
       {{ macroButtonLink.buttonLink(
         '#',
+        'data-id=7 data-menu-item',
         'nav-item nav-item-7',
         'html/icons/icon-building-1.svg',
         'Технопарк «Электополис»',
@@ -197,6 +205,52 @@
         [
           'html/icons/circle-decor-4.svg',
           'html/icons/circle-decor-5.svg'
+        ],
+        'html/icons/radial-glow-1.svg'
+      ) }}
+
+      <div class="nav__content__overlay"></div>
+    </div>
+
+    <div class="nav__content__link-group" data-source-id="1">
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'data-id=8 data-menu-item',
+        'nav-item btn-xl nav-item-1',
+        false,
+        'История',
+        'center',
+        [
+          'html/icons/circle-decor-6.svg',
+          'html/icons/circle-decor-7.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'data-id=9 data-menu-item',
+        'nav-item btn-xl nav-item-2',
+        false,
+        'Наше время',
+        'center',
+        [
+          'html/icons/circle-decor-6.svg',
+          'html/icons/circle-decor-7.svg'
+        ],
+        'html/icons/radial-glow.svg'
+      ) }}
+
+      {{ macroButtonLink.buttonLink(
+        '#',
+        'data-id=10 data-menu-item',
+        'nav-item btn-xl nav-item-3',
+        false,
+        'Великие Луки',
+        'center',
+        [
+          'html/icons/circle-decor-6.svg',
+          'html/icons/circle-decor-7.svg'
         ],
         'html/icons/radial-glow.svg'
       ) }}
@@ -209,12 +263,13 @@
 
   {{ macroButtonLink.buttonLink(
     '#',
+    '',
     'close hud-main__close',
     'html/icons/icon-close.svg',
     'Закрыть',
     'pointer',
     [],
-    'html/icons/radial-glow.svg',
+    false,
     false
   ) }}
   {# end body #}

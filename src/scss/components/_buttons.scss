@@ -89,6 +89,7 @@
     //width: 1em;
     //height: 1em;
     z-index: 5;
+    opacity: 0;
     transition: all ease 0.3s;
     transform: scale(0);
 
@@ -150,12 +151,14 @@
 
   &:hover {
     .btn__glow {
+      opacity: 1;
       transform: scale(0.75);
     }
   }
 
   &:active {
     .btn__glow {
+      opacity: 1;
       transform: scale(1.25);
     }
   }

@@ -19,8 +19,8 @@
 
     svg {
       display: block;
-      width: 1em;
-      height: auto;
+      //width: 1em;
+      //height: auto;
     }
   }
 
@@ -89,9 +89,9 @@
     //width: 1em;
     //height: 1em;
     z-index: 5;
-    opacity: 0;
+    opacity: 0.55;
     transition: all ease 0.3s;
-    transform: scale(0);
+    transform: scale(0.95);
 
     @extend %position-absolute-full;
     @extend %display-flex-centered;

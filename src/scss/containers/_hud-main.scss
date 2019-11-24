@@ -219,13 +219,33 @@
   }
 
   &__close {
-    font-size: 46px;
+    //font-size: 46px;
+    width: 46px;
+    height: 46px;
     position: absolute;
     right: 106px;
     bottom: 61px;
 
-    [class*='__icon'] {
-      font-size: 1em;
+    //[class*='__icon'] {
+    //  font-size: 1em;
+    //}
+
+    .btn__glow {
+      transform: scale(1.35);
+    }
+
+    &:hover {
+      .btn__glow {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+
+    &:active {
+      .btn__glow {
+        opacity: 1;
+        transform: scale(1.85);
+      }
     }
   }
 

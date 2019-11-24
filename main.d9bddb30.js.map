@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/main.js"],"names":["console","log"],"mappings":";AAAAA,QAAQC,IAAI","file":"main.d9bddb30.js","sourceRoot":"../src","sourcesContent":["console.log('Hello!');\n"]}

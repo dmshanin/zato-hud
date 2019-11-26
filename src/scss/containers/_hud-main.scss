@@ -119,6 +119,25 @@
     }
   }
 
+  &__header {
+    &__title {
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      width: 500px;
+      margin: auto;
+      position: absolute;
+      top: 100px;
+      right: 55px;
+      left: 0;
+    }
+  }
+
   &__footer {
     transform: scale(1, -1);
     position: absolute;
@@ -218,17 +237,12 @@
     }
   }
 
+  .btn-nav-simple,
+  .btn-info,
+  .btn-zoom-out,
+  .btn-rotate-360,
   &__close {
-    //font-size: 46px;
-    width: 46px;
-    height: 46px;
     position: absolute;
-    right: 106px;
-    bottom: 61px;
-
-    //[class*='__icon'] {
-    //  font-size: 1em;
-    //}
 
     .btn__glow {
       transform: scale(1.35);
@@ -247,6 +261,67 @@
         transform: scale(1.85);
       }
     }
+  }
+
+  .btn-nav-simple {
+    width: 39px;
+    height: 39px;
+    top: 79px;
+    right: 126px;
+
+    .btn__label__bottom {
+      left: -20px;
+      right: -20px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 19px;
+      text-shadow: 0 0 20px #2d9cdb;
+    }
+  }
+
+  .btn-info {
+    width: 49px;
+    height: 49px;
+    right: 126px;
+    bottom: 516px;
+  }
+
+  .btn-zoom-out {
+    width: 51px;
+    height: 51px;
+    right: 126px;
+    bottom: 410px;
+  }
+
+  .btn-rotate-360 {
+    width: 50px;
+    height: 50px;
+    right: 127px;
+    bottom: 305px;
+  }
+
+  .btn-nav-simple,
+  .btn-info,
+  .btn-zoom-out,
+  .btn-rotate-360 {
+    &:hover {
+      .btn__glow {
+        transform: scale(2);
+      }
+
+      &:active {
+        .btn__glow {
+          transform: scale(2.75);
+        }
+      }
+    }
+  }
+
+  &__close {
+    width: 46px;
+    height: 46px;
+    right: 124px;
+    bottom: 60px;
   }
 
   .nav__toggler {

@@ -29,6 +29,7 @@
           </div>
         </div>
       </div>
+      <div class="hud-main__header__title">О заводе</div>
     </div>
 
     <div class="hud-main__sidebar hud-main__sidebar-left">
@@ -41,6 +42,54 @@
 
     {# start body #}
     {{ macroVolumeSwiper.volumeSwiper(47) }}
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'nav-simple',
+      'html/icons/icon-th.svg',
+      'меню',
+      'bottom',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'info',
+      'html/icons/icon-info.svg',
+      false,
+      'pointer',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'zoom-out',
+      'html/icons/icon-zoom-out.svg',
+      false,
+      'pointer',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'rotate-360',
+      'html/icons/icon-rotate-360.svg',
+      false,
+      'pointer',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
 
     {{ macroButtonLink.buttonLink(
       '#',

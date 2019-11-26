@@ -241,6 +241,7 @@
   .btn-info,
   .btn-zoom-out,
   .btn-rotate-360,
+  .btn-control,
   &__close {
     position: absolute;
 
@@ -300,10 +301,25 @@
     bottom: 305px;
   }
 
+  .btn-control {
+    width: 90px;
+    height: 20px;
+    right: 100px;
+    bottom: 208px;
+
+    .btn__label {
+      font-size: 15px;
+      right: -20px;
+      left: -20px;
+      margin-top: 14px;
+    }
+  }
+
   .btn-nav-simple,
   .btn-info,
   .btn-zoom-out,
-  .btn-rotate-360 {
+  .btn-rotate-360,
+  .btn-control {
     &:hover {
       .btn__glow {
         transform: scale(2);

@@ -1,0 +1,11 @@
+{
+  minifySvg: {
+    plugins: [
+      {
+        removeViewBox: false,
+        convertPathData: false,
+        mergePaths: false,
+      }
+    ]
+  }
+}

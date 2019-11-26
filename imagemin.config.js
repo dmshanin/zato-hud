@@ -5,7 +5,13 @@ module.exports = {
   mozjpeg: { progressive: true, quality: 85 },
   pngquant: { quality: [0.8, 0.9] },
   svgo: {
-    plugins: [{ removeViewBox: false }],
+    plugins: [
+      {
+        removeViewBox: false,
+        convertPathData: false,
+        mergePaths: false,
+      },
+    ],
   },
   webp: { quality: 90 },
 };

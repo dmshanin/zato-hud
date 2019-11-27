@@ -10,6 +10,8 @@
   color: currentColor;
   cursor: pointer;
 
+  z-index: $z-index-control-1;
+
   &__icon {
     //font-size: 0.5em;
     z-index: 15;

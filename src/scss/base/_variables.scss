@@ -1,3 +1,13 @@
 // Preloader
 $preloader-size: 591px;
 $preloader-color: #ffffff;
+
+// z-index
+$z-index-root: 10;
+$z-index-hud: $z-index-root;
+$z-index-bg: $z-index-hud + 5;
+$z-index-video: $z-index-bg + 5;
+$z-index-decor-y: $z-index-video + 5;
+$z-index-layout-root: $z-index-decor-y + 5;
+$z-index-layout-top: $z-index-layout-root + 5;
+$z-index-control-1: $z-index-layout-top + 5;

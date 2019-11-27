@@ -6,7 +6,7 @@
   {% import "html/macros/macro-button-link.njk" as macroButtonLink %}
   {% import "html/macros/macro-volume-swiper.njk" as macroVolumeSwiper %}
 
-  <div class="hud hud-article">
+  <div class="hud hud-video-player">
     <div class="hud__bg">
       <div class="hud__bg__video" style="background: #0078AB url('assets/bg-video.jpg') no-repeat center / cover;"></div>
       <div class="hud__bg__decor-top"></div>
@@ -42,42 +42,6 @@
       'html/icons/icon-th.svg',
       'меню',
       'bottom',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
-
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'info',
-      'html/icons/icon-info.svg',
-      false,
-      'pointer',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
-
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'zoom-out',
-      'html/icons/icon-zoom-out.svg',
-      false,
-      'pointer',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
-
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'rotate-360',
-      'html/icons/icon-rotate-360.svg',
-      false,
-      'pointer',
       [],
       'html/icons/radial-glow-3.svg',
       false

@@ -14,8 +14,9 @@
 @import 'components/buttons';
 @import 'components/volume-swiper';
 @import 'components/nav';
+@import 'components/product-catalog';
 
 // основные контейнеры
 @import 'containers/page_list_box';
 @import 'containers/preloader';
-@import 'containers/hud-main';
+@import 'containers/hud';

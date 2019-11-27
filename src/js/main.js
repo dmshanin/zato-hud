@@ -1,3 +1,5 @@
+import { animateCSS } from './helpers';
+
 // Menu
 (() => {
   const navItemEl = document.querySelectorAll('[data-menu-item-parent]');
@@ -29,6 +31,19 @@
 
       navLinkGroupEl.forEach(item => {
         item.classList.remove('in');
+      });
+    });
+  });
+})();
+
+// Catalog
+(() => {
+  const catalogItemEl = document.querySelectorAll('.h__pc__list-item');
+
+  catalogItemEl.forEach(item => {
+    item.addEventListener('click', () => {
+      animateCSS(item, 'pulse', () => {
+        console.log('ХУЙ');
       });
     });
   });

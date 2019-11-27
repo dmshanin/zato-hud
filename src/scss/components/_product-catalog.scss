@@ -32,6 +32,7 @@
     border-radius: $catalog-item-radius;
     margin: $catalog-item-margin;
     flex-direction: column;
+    cursor: pointer;
 
     @extend %display-flex-centered;
 

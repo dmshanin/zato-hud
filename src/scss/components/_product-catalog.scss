@@ -31,11 +31,14 @@
     background-color: $catalog-item-bg;
     border-radius: $catalog-item-radius;
     margin: $catalog-item-margin;
+    flex-direction: column;
 
     @extend %display-flex-centered;
 
     img {
       display: block;
+      max-width: 100%;
+      height: 152px;
     }
 
     figcaption {

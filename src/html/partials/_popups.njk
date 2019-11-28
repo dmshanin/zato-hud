@@ -1,0 +1,69 @@
+{% import "html/macros/macro-button-link.njk" as macroButtonLink %}
+
+<div class="popup__wrapper fast">
+  <div class="popup" data-id="1">
+    <div class="product-presentation">
+      <div class="product-presentation__content">
+        <div class="product-presentation__tab active" data-tab-id="1">
+          <div class="product-presentation__name">ВГТ-220ВГТ-220</div>
+          <img src="assets/tmp-1.png" alt="" class="product-presentation__model">
+          <a href="#" class="product-presentation__rotate-left">{% include "html/icons/icon-arrow-back.svg" %}</a>
+          <a href="#" class="product-presentation__rotate-right">{% include "html/icons/icon-arrow-next.svg" %}</a>
+        </div>
+        <div class="product-presentation__tab" data-tab-id="2">
+          <div class="h2">ВГТ-220ВГТ-220</div>
+
+          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+
+          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+
+          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+        </div>
+      </div>
+        <div class="product-presentation__control">
+        {{ macroButtonLink.buttonLink(
+          '#',
+          'data-target-id=2',
+          'info',
+          'html/icons/icon-info.svg',
+          'Информация',
+          'pointer',
+          [],
+          'html/icons/radial-glow-3.svg',
+          false
+        ) }}
+
+        {{ macroButtonLink.buttonLink(
+          '#',
+          'data-target-id=1',
+          'rotate-360',
+          'html/icons/icon-rotate-360.svg',
+          '3D Модель',
+          'pointer',
+          [],
+          'html/icons/radial-glow-3.svg',
+          false
+        ) }}
+      </div>
+    </div>
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'close',
+      'html/icons/icon-square-cross.svg',
+      'Закрыть',
+      'pointer',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
+  </div>
+
+  <div class="popup__offset"></div>
+</div>
+
+

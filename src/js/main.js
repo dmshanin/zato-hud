@@ -1,5 +1,56 @@
 import { animateCSS } from './helpers';
 
+const methodStore = {
+  openPopup: id => {
+    const pageSectionEl = document.querySelector(`.page-section`);
+    const popupWrapperEl = document.querySelector(`.popup__wrapper`);
+    const popupEl = popupWrapperEl.querySelector(`.popup[data-id="${id}"]`);
+    const popupOffsetEl = popupWrapperEl.querySelector(`.popup__offset`);
+
+    // blured content section
+    pageSectionEl.classList.add('in-blur');
+
+    // show popup container
+    popupWrapperEl.classList.add('in');
+
+    // open popup
+    popupEl.classList.add('in');
+
+    // run animation
+    animateCSS(popupWrapperEl, 'fadeIn');
+
+    if (!popupOffsetEl.classList.contains('in')) {
+      popupOffsetEl.addEventListener('click', () => {
+        methodStore.closePopup();
+      });
+
+      // Исключаем дублирвание слушателя
+      popupOffsetEl.classList.add('in');
+    }
+  },
+  closePopup: () => {
+    const pageSectionEl = document.querySelector(`.page-section`);
+    const popupWrapperEl = document.querySelector(`.popup__wrapper`);
+    const popup = document.querySelector('.popup.in');
+    const listener = () => {
+      // Убираем блюр с контента
+      pageSectionEl.classList.remove('in-blur');
+
+      // Скрываем обертку попапов
+      popupWrapperEl.classList.remove('in');
+
+      // Удаляем слушатель
+      popup.removeEventListener('transitionend', listener);
+    };
+
+    // Вешаем слушательно окончание анимации
+    popup.addEventListener('transitionend', listener);
+
+    // Скрываем все попапы
+    popup.classList.remove('in');
+  },
+};
+
 // Menu
 (() => {
   const navItemEl = document.querySelectorAll('[data-menu-item-parent]');
@@ -42,8 +93,56 @@ import { animateCSS } from './helpers';
 
   catalogItemEl.forEach(item => {
     item.addEventListener('click', () => {
-      animateCSS(item, 'pulse', () => {
-        console.log('ХУЙ');
+      const id = item.dataset.targetId;
+
+      animateCSS(item, 'pulse');
+      methodStore.openPopup(id);
+    });
+  });
+})();
+
+// Popups
+(() => {
+  const popups = document.querySelectorAll('.popup');
+
+  popups.forEach(item => {
+    const closeBtn = item.querySelector('.btn-close');
+
+    closeBtn.addEventListener('click', () => {
+      methodStore.closePopup();
+    });
+  });
+})();
+
+// Product presentation tab
+(() => {
+  const productPresentationEl = document.querySelectorAll('.product-presentation');
+
+  productPresentationEl.forEach(item => {
+    const btnTab = item.querySelectorAll('[data-target-id]');
+    const tabs = item.querySelectorAll(`.product-presentation__tab`);
+
+    console.log('btnTab.dataset', btnTab.dataset);
+
+    btnTab.forEach(btn => {
+      const tabId = btn.dataset.targetId;
+
+      btn.addEventListener('click', () => {
+        console.log('btnTab', btnTab);
+        console.log('tabs', tabs);
+
+        tabs.forEach(tab => {
+          tab.classList.remove('active');
+
+          console.log('tab', tab);
+          console.log('tabId', Number(tabId));
+          console.log('tab.dataset.tabId', Number(tab.dataset.tabId));
+
+          if (Number(tab.dataset.tabId) === Number(tabId)) {
+            console.log('Добавляем актив для таба', tab);
+            tab.classList.add('active');
+          }
+        });
       });
     });
   });

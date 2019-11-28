@@ -2,7 +2,7 @@
 .h__pc {
   $catalog-item-size: 253px;
   $catalog-item-bg: #055276;
-  $catalog-item-radius: 12px;
+  $catalog-item-radius: $border-radius-normal;
   $catalog-item-margin: 8px;
 
   display: flex;
@@ -50,7 +50,7 @@
 
   &__pagination {
     $pg-item-size: 35px;
-    $pg-item-radius: 50%;
+    $pg-item-radius: $border-radius-circle;
     $pg-item-active-color: #1a98ff;
     $pg-item-mx: 15px;
     $pg-font-color: #fff;

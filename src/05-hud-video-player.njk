@@ -7,87 +7,91 @@
   {% import "html/macros/macro-volume-swiper.njk" as macroVolumeSwiper %}
 
   <div class="hud hud-video-player">
-    <div class="hud__bg">
-      <div class="hud__bg__video" style="background: #0078AB url('assets/bg-video.jpg') no-repeat center / cover;"></div>
-      <div class="hud__bg__decor-top"></div>
-      <div class="hud__bg__decor-bottom"></div>
-    </div>
+    <div class="hud__container-decor">
+      <div class="hud__bg">
+        <div class="hud__bg__video" style="background: #0078AB url('assets/bg-video.jpg') no-repeat center / cover;"></div>
+        <div class="hud__bg__decor-top"></div>
+        <div class="hud__bg__decor-bottom"></div>
+      </div>
 
-    <div class="hud__header">
-      <div class="hud__header__decor__container">
-        <div class="hud__header__decor__row-1 hud__header__decor__row-center">
-          <div class="hud__header__decor__item">
-            {% include "html/icons/top-lines.svg" %}
+      <div class="hud__header">
+        <div class="hud__header__decor__container">
+          <div class="hud__header__decor__row-1 hud__header__decor__row-center">
+            <div class="hud__header__decor__item">
+              {% include "html/icons/top-lines.svg" %}
+            </div>
+          </div>
+          <div class="hud__header__decor__row-2 hud__header__decor__row-space-between">
+            <div class="hud__header__decor__item">
+              {% include "html/icons/side-lines.svg" %}
+            </div>
+            <div class="hud__header__decor__item hud__header__decor__item-reverse">
+              {% include "html/icons/side-lines.svg" %}
+            </div>
           </div>
         </div>
-        <div class="hud__header__decor__row-2 hud__header__decor__row-space-between">
-          <div class="hud__header__decor__item">
-            {% include "html/icons/side-lines.svg" %}
+        <div class="hud__header__title">О заводе</div>
+      </div>
+
+      <div class="hud__footer">
+        <div class="hud__footer__decor__container">
+          <div class="hud__footer__decor__row-1 hud__footer__decor__row-center">
+            <div class="hud__footer__decor__item">
+              {% include "html/icons/top-lines.svg" %}
+            </div>
           </div>
-          <div class="hud__header__decor__item hud__header__decor__item-reverse">
-            {% include "html/icons/side-lines.svg" %}
+          <div class="hud__footer__decor__row-2 hud__footer__decor__row-space-between">
+            <div class="hud__footer__decor__item">
+              {% include "html/icons/side-lines.svg" %}
+            </div>
+            <div class="hud__footer__decor__item hud__footer__decor__item-reverse">
+              {% include "html/icons/side-lines.svg" %}
+            </div>
           </div>
         </div>
       </div>
-      <div class="hud__header__title">О заводе</div>
     </div>
 
-    {# start body #}
-    {{ macroVolumeSwiper.volumeSwiper(47) }}
+    <div class="hud__container-content">
+      {{ macroButtonLink.buttonLink(
+        '#',
+        '',
+        'nav-simple',
+        'html/icons/icon-th.svg',
+        'меню',
+        'bottom',
+        [],
+        'html/icons/radial-glow-3.svg',
+        false
+      ) }}
 
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'nav-simple',
-      'html/icons/icon-th.svg',
-      'меню',
-      'bottom',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
+      {{ macroButtonLink.buttonLink(
+        '#',
+        '',
+        'control',
+        'html/icons/icon-control.svg',
+        'Управление',
+        'bottom',
+        [],
+        'html/icons/radial-glow-3.svg',
+        false
+      ) }}
+    </div>
 
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'control',
-      'html/icons/icon-control.svg',
-      'Управление',
-      'bottom',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
+    <div class="hud__container-controls">
+      {{ macroVolumeSwiper.volumeSwiper(47) }}
 
-    {{ macroButtonLink.buttonLink(
-      '#',
-      '',
-      'close hud__close',
-      'html/icons/icon-close.svg',
-      'Закрыть',
-      'pointer',
-      [],
-      'html/icons/radial-glow-3.svg',
-      false
-    ) }}
-    {# end body #}
-
-    <div class="hud__footer">
-      <div class="hud__footer__decor__container">
-        <div class="hud__footer__decor__row-1 hud__footer__decor__row-center">
-          <div class="hud__footer__decor__item">
-            {% include "html/icons/top-lines.svg" %}
-          </div>
-        </div>
-        <div class="hud__footer__decor__row-2 hud__footer__decor__row-space-between">
-          <div class="hud__footer__decor__item">
-            {% include "html/icons/side-lines.svg" %}
-          </div>
-          <div class="hud__footer__decor__item hud__footer__decor__item-reverse">
-            {% include "html/icons/side-lines.svg" %}
-          </div>
-        </div>
-      </div>
+      {{ macroButtonLink.buttonLink(
+        '#',
+        '',
+        'close hud__close',
+        'html/icons/icon-close.svg',
+        'Закрыть',
+        'pointer',
+        [],
+        'html/icons/radial-glow-3.svg',
+        false
+      ) }}
     </div>
   </div>
 {% endblock %}

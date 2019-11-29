@@ -102,3 +102,13 @@ body {
     }
   }
 }
+
+.collapse {
+  visibility: hidden;
+  opacity: 0;
+
+  &.in {
+    visibility: visible;
+    opacity: 1;
+  }
+}

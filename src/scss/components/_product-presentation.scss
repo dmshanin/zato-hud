@@ -4,12 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px 200px 50px 50px;
   }
 
   &__tab {
-    width: 460px;
     position: relative;
     display: none;
+    max-height: 100%;
+    overflow: auto;
 
     &.active {
       display: block;
@@ -62,8 +64,15 @@
   }
 
   &__model {
+    position: relative;
     display: block;
     margin: auto;
+    width: 460px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   &__rotate-left,

@@ -43,7 +43,7 @@ const methodStore = {
       popup.removeEventListener('transitionend', listener);
     };
 
-    // Вешаем слушательно окончание анимации
+    // Вешаем слушатель на окончание анимации
     popup.addEventListener('transitionend', listener);
 
     // Скрываем все попапы
@@ -122,28 +122,38 @@ const methodStore = {
     const btnTab = item.querySelectorAll('[data-target-id]');
     const tabs = item.querySelectorAll(`.product-presentation__tab`);
 
-    console.log('btnTab.dataset', btnTab.dataset);
-
     btnTab.forEach(btn => {
       const tabId = btn.dataset.targetId;
 
       btn.addEventListener('click', () => {
-        console.log('btnTab', btnTab);
-        console.log('tabs', tabs);
-
         tabs.forEach(tab => {
           tab.classList.remove('active');
 
-          console.log('tab', tab);
-          console.log('tabId', Number(tabId));
-          console.log('tab.dataset.tabId', Number(tab.dataset.tabId));
-
           if (Number(tab.dataset.tabId) === Number(tabId)) {
-            console.log('Добавляем актив для таба', tab);
             tab.classList.add('active');
           }
         });
       });
+    });
+  });
+})();
+
+// Collapse
+(() => {
+  const collapseEl = document.querySelectorAll('[data-toggle="collapse"]');
+
+  collapseEl.forEach(item => {
+    item.addEventListener('click', e => {
+      const target = item.getAttribute('href');
+      const targetEl = document.querySelector(target);
+
+      e.preventDefault();
+
+      if (targetEl.classList.contains('in')) {
+        targetEl.classList.remove('in');
+      } else {
+        targetEl.classList.add('in');
+      }
     });
   });
 })();

@@ -53,7 +53,7 @@
     </div>
 
     <div class="hud__container-content">
-      <div class="button-group">
+      <div class="btn-group collapse" id="btn-group-1">
         {{ macroButtonLink.buttonLink(
           '#',
           '',
@@ -92,8 +92,8 @@
       </div>
 
       {{ macroButtonLink.buttonLink(
-        '#',
-        '',
+        '#btn-group-1',
+        'data-toggle=collapse',
         'control',
         'html/icons/icon-control.svg',
         'Управление',

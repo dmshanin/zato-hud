@@ -6,10 +6,10 @@
   {% import "html/macros/macro-button-link.njk" as macroButtonLink %}
   {% import "html/macros/macro-volume-swiper.njk" as macroVolumeSwiper %}
 
-  <div class="hud hud-article">
+  <div class="hud hud-map">
     <div class="hud__container-decor">
       <div class="hud__bg">
-        <div class="hud__bg__video" style="background-image: url('assets/bg-video.jpg');"></div>
+        <div class="hud__bg__video"></div>
         <div class="hud__bg__decor-top"></div>
         <div class="hud__bg__decor-bottom"></div>
       </div>
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="hud__header__title">О заводе</div>
+        <div class="hud__header__title">Проекты</div>
       </div>
 
       <div class="hud__footer">
@@ -81,8 +81,8 @@
         {{ macroButtonLink.buttonLink(
           '#',
           '',
-          'rotate-360',
-          'html/icons/icon-rotate-360.svg',
+          'catalog',
+          'html/icons/icon-catalog.svg',
           false,
           'pointer',
           [],
@@ -102,6 +102,24 @@
         'html/icons/radial-glow-3.svg',
         false
       ) }}
+
+      <div class="hud-map__pointers">
+        <div class="hud-map__point hud-map__point-top-left" style="top: 450px; left: 700px;">
+          <div class="hud-map__pointer">ОАО «Калининградская генерирующая компания»</div>
+        </div>
+
+        <div class="hud-map__point hud-map__point-top-right" style="top: 450px; left: 920px;">
+          <div class="hud-map__pointer">Подстанция «Хованская»</div>
+        </div>
+
+        <div class="hud-map__point hud-map__point-bottom-left" style="top: 550px; left: 700px;">
+          <div class="hud-map__pointer">ЛЕБЕДИНСКИЙ ГОК</div>
+        </div>
+
+        <div class="hud-map__point hud-map__point-bottom-right" style="top: 550px; left: 920px;">
+          <div class="hud-map__pointer">Нефтеперерабатывающий завод (НПС 5)</div>
+        </div>
+      </div>
     </div>
 
     <div class="hud__container-controls">

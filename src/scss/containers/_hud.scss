@@ -415,19 +415,19 @@
       &:after,
       &:before {
         position: absolute;
+        content: '';
+        display: block;
       }
 
       &:after {
-        content: '';
-        display: block;
+        @extend %animation__opacity__1-05__2;
+
         background: transparent url('../html/icons/body-decor-3.svg') no-repeat center / contain;
         width: 72px;
         height: 59px;
       }
 
       &:before {
-        content: '';
-        display: block;
         background: transparent url('../html/icons/pointer-line.svg') no-repeat center / contain;
         width: 274px;
         height: 93px;
@@ -510,6 +510,12 @@
           left: 0;
         }
       }
+
+      &:hover {
+        .hud-map__pointer {
+          text-shadow: 0 0 15px rgba($curiousBlue, 1);
+        }
+      }
     }
 
     &__pointer {
@@ -518,6 +524,8 @@
       text-shadow: 0 0 8px rgba(#000000, 0.5);
       width: 274px;
       position: absolute;
+      transition: all ease $duration-faster;
+      cursor: pointer;
     }
   }
 }

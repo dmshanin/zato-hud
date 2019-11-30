@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: radial-gradient(#2d9cdb, #122436);
+  background: radial-gradient($curiousBlue, $blueWhale);
 
   &__wrapper {
     width: $preloader-size;

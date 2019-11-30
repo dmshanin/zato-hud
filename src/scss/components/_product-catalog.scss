@@ -1,7 +1,7 @@
 // product catalog
 .h__pc {
   $catalog-item-size: 253px;
-  $catalog-item-bg: #055276;
+  $catalog-item-bg: $toreaBay;
   $catalog-item-radius: $border-radius-normal;
   $catalog-item-margin: 8px;
 
@@ -51,7 +51,7 @@
   &__pagination {
     $pg-item-size: 35px;
     $pg-item-radius: $border-radius-circle;
-    $pg-item-active-color: #1a98ff;
+    $pg-item-active-color: $royalBlue;
     $pg-item-mx: 15px;
     $pg-font-color: #fff;
 
@@ -81,8 +81,8 @@
 
       &.active {
         .page-link {
-          border-color: $pg-item-active-color;
-          background-color: $pg-item-active-color;
+          border-color: $royalBlue;
+          background-color: $royalBlue;
         }
       }
     }

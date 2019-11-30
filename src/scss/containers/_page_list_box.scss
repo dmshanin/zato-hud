@@ -1,7 +1,7 @@
 .plb {
   height: 100%;
   display: flex;
-  background: radial-gradient(#2d9cdb, #122436);
+  background: radial-gradient($curiousBlue, $blueWhale);
 
   &__container {
     line-height: 1.4;

@@ -1,13 +1,13 @@
 import { animateCSS } from './helpers';
 
 const methodStore = {
-  openPopup: id => {
+  openPopup: targetSelector => {
     const pageSectionEl = document.querySelector(`.page-section`);
     const popupWrapperEl = document.querySelector(`.popup__wrapper`);
-    const popupEl = popupWrapperEl.querySelector(`.popup[data-id="${id}"]`);
+    const popupEl = popupWrapperEl.querySelector(targetSelector);
     const popupOffsetEl = popupWrapperEl.querySelector(`.popup__offset`);
 
-    // blured content section
+    // blurred content section
     pageSectionEl.classList.add('in-blur');
 
     // show popup container
@@ -89,14 +89,14 @@ const methodStore = {
 
 // Catalog
 (() => {
-  const catalogItemEl = document.querySelectorAll('.h__pc__list-item');
+  const catalogItemEl = document.querySelectorAll('[data-toggle="popup"]');
 
   catalogItemEl.forEach(item => {
     item.addEventListener('click', () => {
-      const id = item.dataset.targetId;
+      const targetSelector = item.dataset.target;
 
       animateCSS(item, 'pulse');
-      methodStore.openPopup(id);
+      methodStore.openPopup(targetSelector);
     });
   });
 })();

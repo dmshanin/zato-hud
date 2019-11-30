@@ -1,7 +1,7 @@
 {% import "html/macros/macro-button-link.njk" as macroButtonLink %}
 
 <div class="popup__wrapper fast">
-  <div class="popup" data-id="1">
+  <div class="popup" data-popup-id="1">
     <div class="product-presentation">
       <div class="product-presentation__content">
         <div class="product-presentation__tab active" data-tab-id="1">
@@ -51,6 +51,21 @@
         ) }}
       </div>
     </div>
+
+    {{ macroButtonLink.buttonLink(
+      '#',
+      '',
+      'close',
+      'html/icons/icon-square-cross.svg',
+      'Закрыть',
+      'pointer',
+      [],
+      'html/icons/radial-glow-3.svg',
+      false
+    ) }}
+  </div>
+
+  <div class="popup" data-popup-id="2">
 
     {{ macroButtonLink.buttonLink(
       '#',

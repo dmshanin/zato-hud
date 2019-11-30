@@ -18,11 +18,19 @@ body {
 .h5,
 .h6 {
   font-family: 'DIN Pro', sans-serif;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .h2 {
   font-size: 35px;
+}
+
+.h3 {
+  font-size: 30px;
+}
+
+.h4 {
+  font-size: 28px;
 }
 
 .page-section {
@@ -109,6 +117,20 @@ body {
       }
     }
   }
+
+  &-project {
+    font-size: 24px;
+    line-height: 1.25;
+
+    .ul-glowing-dots {
+      column-count: 2;
+      column-gap: 40px;
+
+      li {
+        margin-bottom: 45px;
+      }
+    }
+  }
 }
 
 .collapse {
@@ -130,14 +152,14 @@ body {
 }
 
 .single-line {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
 }
 
 .triple-line {
   background-color: rgba(white, 1);
-  margin-top: 1.5em;
-  margin-bottom: calc(8px + 1.5em);
+  margin-top: 1.75em;
+  margin-bottom: calc(8px + 1.75em);
   width: 335px;
 
   &:before,
@@ -160,5 +182,30 @@ body {
     background-color: rgba(white, 0.25);
     top: 8px;
     width: 199px;
+  }
+}
+
+.ul-glowing-dots {
+  list-style: none;
+  padding-left: 0;
+
+  & > li {
+    padding-left: 42px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 5px $curiousBlue;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
   }
 }

@@ -257,12 +257,15 @@
   .btn-control,
   &__close {
     position: absolute;
+    transition: ease all $duration-faster;
 
     .btn__glow {
       transform: scale(1.35);
     }
 
     &:hover {
+      transform: scale(1.15);
+
       .btn__glow {
         opacity: 1;
         transform: scale(1.5);
@@ -270,6 +273,8 @@
     }
 
     &:active {
+      transform: scale(1.1);
+
       .btn__glow {
         opacity: 1;
         transform: scale(1.85);
@@ -281,7 +286,7 @@
     width: 39px;
     height: 39px;
     top: 79px;
-    right: 126px;
+    right: 130px;
 
     .btn__label__bottom {
       left: -20px;
@@ -303,7 +308,7 @@
   .btn-zoom-out {
     width: 51px;
     height: 51px;
-    right: 126px;
+    right: 124px;
     bottom: 410px;
   }
 
@@ -355,7 +360,7 @@
   &__close {
     width: 46px;
     height: 46px;
-    right: 124px;
+    right: 126px;
     bottom: 60px;
   }
 

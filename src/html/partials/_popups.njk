@@ -2,53 +2,55 @@
 
 <div class="popup__wrapper fast">
   <div class="popup" data-popup-id="1">
-    <div class="product-presentation">
-      <div class="product-presentation__content">
-        <div class="product-presentation__tab active" data-tab-id="1">
-          <div class="product-presentation__model">
-            <div class="product-presentation__name">ВГТ-220ВГТ-220</div>
-            <img src="assets/tmp-1.png" alt="">
-            <a href="#" class="product-presentation__rotate-left">{% include "html/icons/icon-arrow-back.svg" %}</a>
-            <a href="#" class="product-presentation__rotate-right">{% include "html/icons/icon-arrow-next.svg" %}</a>
+    <div class="popup__content">
+      <div class="product-presentation">
+        <div class="product-presentation__content">
+          <div class="product-presentation__tab active" data-tab-id="1">
+            <div class="product-presentation__model">
+              <div class="product-presentation__name">ВГТ-220ВГТ-220</div>
+              <img src="assets/tmp-1.png" alt="">
+              <a href="#" class="product-presentation__rotate-left">{% include "html/icons/icon-arrow-back.svg" %}</a>
+              <a href="#" class="product-presentation__rotate-right">{% include "html/icons/icon-arrow-next.svg" %}</a>
+            </div>
+          </div>
+          <div class="product-presentation__tab" data-tab-id="2">
+            <div class="h2">ВГТ-220ВГТ-220</div>
+
+            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+
+            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+
+            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
+              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
           </div>
         </div>
-        <div class="product-presentation__tab" data-tab-id="2">
-          <div class="h2">ВГТ-220ВГТ-220</div>
-
-          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
-
-          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
-
-          <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-            Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
-        </div>
-      </div>
         <div class="product-presentation__control">
-        {{ macroButtonLink.buttonLink(
-          '#',
-          'data-target-id=2',
-          'info',
-          'html/icons/icon-info.svg',
-          'Информация',
-          'pointer',
-          [],
-          'html/icons/radial-glow-3.svg',
-          false
-        ) }}
+          {{ macroButtonLink.buttonLink(
+            '#',
+            'data-target-id=2',
+            'info',
+            'html/icons/icon-info.svg',
+            'Информация',
+            'pointer',
+            [],
+            'html/icons/radial-glow-3.svg',
+            false
+          ) }}
 
-        {{ macroButtonLink.buttonLink(
-          '#',
-          'data-target-id=1',
-          'rotate-360',
-          'html/icons/icon-rotate-360.svg',
-          '3D Модель',
-          'pointer',
-          [],
-          'html/icons/radial-glow-3.svg',
-          false
-        ) }}
+          {{ macroButtonLink.buttonLink(
+            '#',
+            'data-target-id=1',
+            'rotate-360',
+            'html/icons/icon-rotate-360.svg',
+            '3D Модель',
+            'pointer',
+            [],
+            'html/icons/radial-glow-3.svg',
+            false
+          ) }}
+        </div>
       </div>
     </div>
 
@@ -66,28 +68,30 @@
   </div>
 
   <div class="popup" data-popup-id="2">
-    <div class="h3">
-      <div>2018 г.</div>
-      <div>ПАО «МОЭСК»</div>
+    <div class="popup__content">
+      <div class="h3">
+        <div>2018 г.</div>
+        <div>ПАО «МОЭСК»</div>
+      </div>
+
+      <div class="triple-line"></div>
+
+      <div class="h4">Подстанция «Хованская», ПС Лесная </div>
+      <div class="h4">Новая Москва Поселение Сосенское, посёлок Газопровод</div>
+
+      <div class="">
+        <p>Примечание: В рамках проекта выполняется прокладка кабеля 220 кВ  от строящейся ПС Хованская до действующей ПС Лесная.</p>
+      </div>
+
+      <div class="single-line"></div>
+
+      <ul class="font-weight-medium h4">
+        <li>Жесткая ошиновка 330 кВ</li>
+        <li>Трансформаторы тока 330 кВ</li>
+        <li>Жесткая ошиновка 330 кВ</li>
+        <li>Трансформаторы тока 330 кВ</li>
+      </ul>
     </div>
-
-    <hr class="triple-line">
-
-    <div class="h4">Подстанция «Хованская», ПС Лесная </div>
-    <div class="h4">Новая Москва Поселение Сосенское, посёлок Газопровод</div>
-
-    <div class="">
-      <p>Примечание: В рамках проекта выполняется прокладка кабеля 220 кВ  от строящейся ПС Хованская до действующей ПС Лесная.</p>
-    </div>
-
-    <hr class="single-line">
-
-    <ul class="font-weight-medium h4">
-      <li>Жесткая ошиновка 330 кВ</li>
-      <li>Трансформаторы тока 330 кВ</li>
-      <li>Жесткая ошиновка 330 кВ</li>
-      <li>Трансформаторы тока 330 кВ</li>
-    </ul>
 
     {{ macroButtonLink.buttonLink(
       '#',

@@ -403,6 +403,8 @@
   }
 
   &-map {
+    $point-size: 13px;
+
     z-index: 100;
 
     &__pointers {
@@ -411,11 +413,10 @@
     }
 
     &__point {
-      width: 13px;
-      height: 13px;
       position: absolute;
-      background-color: #fff;
-      border-radius: 50%;
+      width: $point-size;
+      height: $point-size;
+      cursor: default;
 
       &:after,
       &:before {
@@ -451,7 +452,7 @@
           bottom: 30px;
         }
 
-        .hud-map__pointer {
+        .hud-map__label {
           bottom: 105px;
           right: 0;
         }
@@ -470,7 +471,7 @@
           bottom: 30px;
         }
 
-        .hud-map__pointer {
+        .hud-map__label {
           bottom: 105px;
           left: 0;
           text-align: right;
@@ -490,7 +491,7 @@
           top: 30px;
         }
 
-        .hud-map__pointer {
+        .hud-map__label {
           top: 105px;
           right: 0;
         }
@@ -509,21 +510,15 @@
           top: 30px;
         }
 
-        .hud-map__pointer {
+        .hud-map__label {
           text-align: right;
           top: 105px;
           left: 0;
         }
       }
-
-      &:hover {
-        .hud-map__pointer {
-          text-shadow: 0 0 15px rgba($curiousBlue, 1);
-        }
-      }
     }
 
-    &__pointer {
+    &__label {
       font-size: 18px;
       font-weight: 500;
       text-shadow: 0 0 8px rgba(#000000, 0.5);
@@ -531,6 +526,24 @@
       position: absolute;
       transition: all ease $duration-faster;
       cursor: pointer;
+
+      &:hover {
+        text-shadow: 0 0 15px rgba($curiousBlue, 1);
+      }
+    }
+
+    &__pointer {
+      width: $point-size;
+      height: $point-size;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all ease $duration-faster;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 10px 2px white;
+      }
     }
   }
 }

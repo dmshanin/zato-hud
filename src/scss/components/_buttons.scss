@@ -9,8 +9,8 @@
   line-height: 1.5;
   color: currentColor;
   cursor: pointer;
-
   z-index: $z-index-control-1;
+  transition: all ease $duration-faster;
 
   &__icon {
     //font-size: 0.5em;
@@ -33,6 +33,7 @@
     z-index: 15;
     text-transform: uppercase;
     white-space: normal;
+    transition: all ease $duration-faster;
 
     &__bottom {
       top: 100%;
@@ -53,6 +54,7 @@
     min-height: 100%;
     z-index: 10;
     position: relative;
+    transition: all ease $duration-faster;
 
     @extend %display-flex-centered;
 
@@ -60,7 +62,6 @@
       @extend %display-flex-centered;
 
       position: absolute;
-      //width: 100%;
 
       &:nth-of-type(1) {
         position: relative;
@@ -92,7 +93,7 @@
     //height: 1em;
     z-index: 5;
     opacity: 0.55;
-    transition: all ease 0.3s;
+    transition: all ease $duration-faster;
     transform: scale(0.95);
 
     @extend %position-absolute-full;
@@ -152,13 +153,37 @@
   }
 
   &:hover {
+    transform: scale(1.1);
+
     .btn__glow {
       opacity: 1;
-      transform: scale(0.75);
+      transform: scale(1.25);
+    }
+
+    .btn__circles {
+      transform: rotate(90deg);
+
+      //&__item {
+      //
+      //  &:nth-of-type(1) {
+      //    transform: scale(0.75);
+      //  }
+      //
+      //  &:nth-of-type(2) {
+      //    transform: rotate(90deg);
+      //  }
+      //}
+    }
+
+    .btn__label {
+      text-shadow: 2px 2px 20px $curiousBlue, -2px -2px 20px $curiousBlue,
+        -2px 2px 20px $curiousBlue, 2px -2px 20px $curiousBlue, 0 0 3px $blueWhale;
     }
   }
 
   &:active {
+    transform: scale(1.05);
+
     .btn__glow {
       opacity: 1;
       transform: scale(1.25);

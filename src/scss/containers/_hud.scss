@@ -257,7 +257,7 @@
   .btn-control,
   &__close {
     position: absolute;
-    transition: ease all $duration-faster;
+    transition: all ease $duration-faster;
 
     .btn__glow {
       transform: scale(1.35);
@@ -327,8 +327,15 @@
   }
 
   .btn-control {
-    width: 90px;
-    height: 20px;
+    width: 46px;
+    height: 46px;
+
+    .btn__icon {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .btn__label {
       font-size: 15px;
@@ -372,6 +379,8 @@
 
     .btn {
       height: 269px;
+
+      @extend %btn-flare;
     }
 
     .btn__pointer__decor {
@@ -390,8 +399,8 @@
   &-article,
   &-map {
     .btn-control {
-      right: 100px;
-      bottom: 208px;
+      right: 127px;
+      bottom: 198px;
     }
   }
 

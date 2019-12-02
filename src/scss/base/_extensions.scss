@@ -22,35 +22,35 @@
 %animation {
   &__rotate {
     &-right-1 {
-      animation: 100s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 50s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-right-2 {
-      animation: 250s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 125s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-right-3 {
-      animation: 350s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 175s linear 0.15s infinite rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-right-4 {
-      animation: 500s linear 0.15s infinite rotate, 1s opacity-1-075 0.15s infinite ease-in;
+      animation: 250s linear 0.15s infinite rotate, 1s opacity-1-075 0.15s infinite ease-in;
     }
 
     &-left-1 {
-      animation: 100s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 50s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-left-2 {
-      animation: 250s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 125s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-left-3 {
-      animation: 350s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
+      animation: 175s linear 0.15s infinite reverse rotate, 2s opacity-1-075 0.35s infinite ease-in;
     }
 
     &-left-4 {
-      animation: 500s linear 0.15s infinite reverse rotate, 1s opacity-1-075 0.15s infinite ease-in;
+      animation: 250s linear 0.15s infinite reverse rotate, 1s opacity-1-075 0.15s infinite ease-in;
     }
   }
 
@@ -94,6 +94,36 @@
 
       &__3 {
         animation: 3s opacity-1-075 0.15s infinite linear;
+      }
+    }
+  }
+}
+
+%btn-flare {
+  .btn__icon {
+    overflow: hidden;
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      background-color: #fff;
+      width: 0.15em;
+      min-width: 20px;
+      height: 200%;
+      position: absolute;
+      top: -70%;
+      bottom: 0;
+      left: -50%;
+      transform: rotateZ(45deg);
+      opacity: 0.25;
+    }
+  }
+
+  &:hover {
+    .btn__icon {
+      &:before {
+        transition: all 0.3s ease;
+        left: 150%;
       }
     }
   }

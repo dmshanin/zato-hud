@@ -61,6 +61,8 @@
         margin-right: 48px;
         margin-left: 48px;
 
+        @extend %btn-flare;
+
         &__label {
           font-size: 20px;
           line-height: 25px;
@@ -127,6 +129,22 @@
           [class*='__icon'] svg {
             width: 95px;
           }
+        }
+      }
+
+      &__level-1 {
+        width: 55%;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: -70px;
+          left: 0;
+          background-color: $blueWhale;
+          opacity: 0.35;
+          box-shadow: 0 0 70px rgba(255, 255, 255, 0.5);
         }
       }
     }

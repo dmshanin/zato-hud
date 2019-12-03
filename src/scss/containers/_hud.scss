@@ -218,7 +218,12 @@
         &-2 {
           //width: 78px;
           top: 135px;
-          left: 195px;
+          left: 184px;
+
+          svg {
+            width: 100px;
+            height: 100px;
+          }
         }
 
         &-3 {
@@ -249,6 +254,35 @@
     }
   }
 
+  .btn-group-control {
+    position: absolute;
+    right: 127px;
+    bottom: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+
+    .btn {
+      + .btn {
+        margin-top: 55px;
+      }
+    }
+  }
+
+  .btn-info,
+  .btn-zoom-out,
+  .btn-catalog {
+    position: relative;
+  }
+
+  .btn-nav-simple,
+  .btn-rotate-360,
+  .btn-control,
+  &__close {
+    position: absolute;
+  }
+
   .btn-nav-simple,
   .btn-info,
   .btn-zoom-out,
@@ -256,7 +290,6 @@
   .btn-catalog,
   .btn-control,
   &__close {
-    position: absolute;
     transition: all ease $duration-faster;
 
     .btn__glow {
@@ -301,15 +334,16 @@
   .btn-info {
     width: 49px;
     height: 49px;
-    right: 126px;
-    bottom: 516px;
+    //right: 126px;
+    //bottom: 516px;
   }
 
   .btn-zoom-out {
     width: 51px;
     height: 51px;
-    right: 124px;
-    bottom: 410px;
+    right: -4px;
+    //right: 124px;
+    //bottom: 410px;
   }
 
   .btn-rotate-360 {
@@ -322,8 +356,8 @@
   .btn-catalog {
     width: 46px;
     height: 46px;
-    right: 127px;
-    bottom: 305px;
+    //right: 127px;
+    //bottom: 305px;
   }
 
   .btn-control {

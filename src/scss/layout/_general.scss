@@ -346,10 +346,22 @@ body {
   }
 }
 
-.nav__toggler {
-  .btn__pointer__decor {
-    svg {
-      @extend %animation__opacity__1-075__1;
+.hud-map__point,
+.hud__sidebar-right__decor-5,
+.nav__toggler .btn__pointer__decor {
+  svg {
+    @extend %animation__opacity__1-075__1;
+
+    .path-1 {
+      @extend %animation__opacity__1-05__2;
+    }
+
+    .path-2 {
+      @extend %animation__opacity__1-05__1;
+    }
+
+    .path-3 {
+      @extend %animation__opacity__1-05__3;
     }
   }
 }
@@ -368,7 +380,7 @@ body {
 
 .hud__sidebar-right__decor-5 {
   svg {
-    @extend %animation__opacity__1-075__1;
+    @extend %animation__opacity__1-075__2;
   }
 }
 

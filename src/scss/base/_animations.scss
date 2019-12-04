@@ -49,3 +49,59 @@
     opacity: 1;
   }
 }
+
+@keyframes width-075 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(0.75, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes width-09 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(0.9, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes width-115 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.15, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes width-125 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.25, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}

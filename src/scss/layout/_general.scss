@@ -215,7 +215,7 @@ body {
         left: 0;
         top: 0;
         bottom: 0;
-        margin: auto;
+        margin: 0.35em 0 0 0;
         transition: all ease $duration-faster;
       }
 
@@ -227,5 +227,153 @@ body {
         }
       }
     }
+  }
+}
+
+.hud__header__decor__item-9 {
+  svg {
+    .path-1 {
+      @extend %animation__opacity__1-05__1;
+    }
+
+    .path-2 {
+      @extend %animation__opacity__1-05__2;
+    }
+
+    .path-3 {
+      @extend %animation__opacity__1-05__3;
+    }
+  }
+}
+
+.hud__header__decor__row-4 {
+  svg {
+    .path-2,
+    .path-3,
+    .path-4,
+    .path-5 {
+      transform-origin: 190px;
+    }
+
+    .path-1 {
+      @extend %animation__opacity__1-05__3;
+    }
+
+    .path-2 {
+      &-1 {
+        animation: 1s opacity-1-075 0.15s infinite linear;
+      }
+
+      &-2 {
+        animation: 2.75s width-075 0.15s infinite ease, 1s opacity-1-075 0.15s infinite linear;
+      }
+    }
+
+    .path-3 {
+      &-1 {
+        animation: 1s opacity-1-075 0.15s infinite linear;
+      }
+
+      &-2 {
+        animation: 3.5s width-125 0.25s infinite ease, 1s opacity-1-075 0.15s infinite linear;
+      }
+    }
+
+    .path-4 {
+      &-1 {
+        animation: 1s opacity-1-075 0.15s infinite linear;
+      }
+
+      &-2 {
+        animation: 3.15s width-09 0.5s infinite ease, 1s opacity-1-075 0.15s infinite linear;
+      }
+    }
+
+    .path-5 {
+      &-1 {
+        animation: 1s opacity-1-075 0.15s infinite linear;
+      }
+
+      &-2 {
+        animation: 2.5s width-115 0.75s infinite ease, 1s opacity-1-075 0.15s infinite linear;
+      }
+    }
+
+    .path-6 {
+      @extend %animation__opacity__1-075__3;
+    }
+
+    .path-7 {
+      @extend %animation__opacity__1-05__2;
+    }
+  }
+}
+
+.hud__sidebar-left__decor-1 {
+  svg {
+    @extend %animation__opacity__1-075__2;
+
+    .path-1 {
+      &-1,
+      &-2 {
+        transition: all ease 0.3s;
+        transform-origin: 29px 60px;
+        animation: 2s rotate 0.15s infinite linear;
+      }
+    }
+
+    .path-2 {
+      &-1,
+      &-2 {
+        transition: all ease 0.3s;
+        transform-origin: 29px 47px;
+        animation: 2.15s rotate 0.15s infinite linear;
+      }
+    }
+  }
+}
+
+.hud__sidebar-right__decor-1,
+.hud__sidebar-left__decor-2 {
+  svg {
+    @extend %animation__opacity__1-05__3;
+  }
+}
+
+.hud__header__decor__row-3 {
+  svg {
+    @extend %animation__opacity__1-075__2;
+  }
+}
+
+.nav__toggler {
+  .btn__pointer__decor {
+    svg {
+      @extend %animation__opacity__1-075__1;
+    }
+  }
+}
+
+.hud__sidebar-right__decor-3 {
+  svg {
+    @extend %animation__opacity__1-075__2;
+  }
+}
+
+.hud__sidebar-right__decor-4 {
+  svg {
+    @extend %animation__opacity__1-075__2;
+  }
+}
+
+.hud__sidebar-right__decor-5 {
+  svg {
+    @extend %animation__opacity__1-075__1;
+  }
+}
+
+.hud__sidebar-right__decor-6 {
+  svg {
+    @extend %animation__opacity__1-075__3;
   }
 }

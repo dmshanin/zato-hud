@@ -1,8 +1,8 @@
 <svg width="355" height="33" viewBox="0 0 355 33" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g filter="url(#filter13_d)">
-    <path d="M345 10V12L10 12V10L345 10Z" fill="white"/>
-    <path opacity="0.49" d="M281.121 15.2998V17.2998L10 17.2998V15.2998L281.121 15.2998Z" fill="white"/>
-    <path opacity="0.25" d="M208.92 20.2002V22.2002L10.0007 22.2002V20.2002L208.92 20.2002Z" fill="white"/>
+    <path class="path-1" d="M345 10V12L10 12V10L345 10Z" fill="white"/>
+    <path class="path-2" opacity="0.49" d="M281.121 15.2998V17.2998L10 17.2998V15.2998L281.121 15.2998Z" fill="white"/>
+    <path class="path-3" opacity="0.25" d="M208.92 20.2002V22.2002L10.0007 22.2002V20.2002L208.92 20.2002Z" fill="white"/>
   </g>
   <defs>
     <filter id="filter13_d" x="0" y="0" width="355" height="32.2002" filterUnits="userSpaceOnUse"

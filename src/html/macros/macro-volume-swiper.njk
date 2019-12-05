@@ -1,5 +1,5 @@
 {% macro volumeSwiper(value) %}
-  <div class="volume-swiper{% if value <= 0 %} volume-swiper__off{% endif %}">
+  <div class="volume-swiper{% if value <= 0 %} volume-swiper__off{% endif %} animated fadeIn">
     <div class="volume-swiper__label">{{ value }}%</div>
     <div class="volume-swiper__slider">
       <div class="volume-swiper__slider__empty">{% include "html/icons/volume-swiper.svg" %}</div>

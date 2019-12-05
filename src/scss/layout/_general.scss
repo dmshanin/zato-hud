@@ -309,7 +309,7 @@ body {
   }
 }
 
-.hud__sidebar-left__decor-1 {
+.hud__sidebar-right__decor-1 {
   svg {
     @extend %animation__opacity__1-075__2;
 
@@ -333,10 +333,10 @@ body {
   }
 }
 
-.hud__sidebar-right__decor-1,
-.hud__sidebar-left__decor-2 {
+.hud__sidebar-left__decor-1,
+.hud__sidebar-right__decor-2 {
   svg {
-    @extend %animation__opacity__1-05__3;
+    @extend %animation__opacity__1-075__3;
   }
 }
 

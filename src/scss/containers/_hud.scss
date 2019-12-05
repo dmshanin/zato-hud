@@ -183,16 +183,26 @@
           height: auto;
         }
 
-        &-1 {
-          width: 46px;
-          top: 132px;
-          right: 229px;
-        }
+        //&-1 {
+        //  width: 46px;
+        //  top: 132px;
+        //  right: 229px;
+        //}
+        //
+        //&-2 {
+        //  width: 27px;
+        //  top: 122px;
+        //  right: 178px;
+        //}
 
-        &-2 {
-          width: 27px;
-          top: 122px;
-          right: 178px;
+        &-1 {
+          top: 82px;
+          left: 74px;
+
+          svg {
+            width: 150px;
+            height: 150px;
+          }
         }
       }
     }
@@ -209,21 +219,33 @@
           height: auto;
         }
 
+        //&-1 {
+        //  width: 27px;
+        //  top: 155px;
+        //  left: 143px;
+        //}
+        //
+        //&-2 {
+        //  //width: 78px;
+        //  top: 135px;
+        //  left: 184px;
+        //
+        //  svg {
+        //    width: 100px;
+        //    height: 100px;
+        //  }
+        //}
+
         &-1 {
-          width: 27px;
-          top: 155px;
-          left: 143px;
+          width: 46px;
+          top: 132px;
+          left: 229px;
         }
 
         &-2 {
-          //width: 78px;
-          top: 135px;
-          left: 184px;
-
-          svg {
-            width: 100px;
-            height: 100px;
-          }
+          width: 27px;
+          top: 122px;
+          left: 178px;
         }
 
         &-3 {

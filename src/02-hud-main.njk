@@ -14,7 +14,7 @@
       <div class="hud__bg__decor-bottom"></div>
     </div>
 
-    <div class="hud__header">
+    <div class="hud__header animated slideInDown delay-1s">
       <div class="hud__header__decor__container">
         <div class="hud__header__decor__row-1 hud__header__decor__row-center">
           <div class="hud__header__decor__item">
@@ -39,10 +39,10 @@
         </div>
         <div class="hud__header__decor__row-4 hud__header__decor__row-space-between">
           <div class="hud__header__decor__item">
-            {% include "html/icons/side-decor-2.svg" %}
+            {% include "html/icons/side-decor-3.svg" %}
           </div>
           <div class="hud__header__decor__item hud__header__decor__item-reverse">
-            {% include "html/icons/side-decor-2.svg" %}
+            {% include "html/icons/side-decor-3.svg" %}
           </div>
         </div>
         <div class="hud__header__decor__row-5 hud__header__decor__row-center">
@@ -53,23 +53,19 @@
       </div>
     </div>
 
-    <div class="hud__sidebar hud__sidebar-left">
+    <div class="hud__sidebar hud__sidebar-left animated fadeInLeft slow delay-1s">
       <div class="hud__sidebar-left__decor hud__sidebar-left__decor-1">
-        {% include "html/icons/body-decor-1.svg" %}
-      </div>
-
-      <div class="hud__sidebar-left__decor hud__sidebar-left__decor-2">
-        {% include "html/icons/body-decor-2.svg" %}
+        {% include "html/icons/logo-sm.svg" %}
       </div>
     </div>
 
-    <div class="hud__sidebar hud__sidebar-right">
+    <div class="hud__sidebar hud__sidebar-right animated fadeInRight slow delay-1s">
       <div class="hud__sidebar-right__decor hud__sidebar-right__decor-1">
-        {% include "html/icons/body-decor-2.svg" %}
+        {% include "html/icons/body-decor-1.svg" %}
       </div>
 
       <div class="hud__sidebar-right__decor hud__sidebar-right__decor-2">
-        {% include "html/icons/logo-sm.svg" %}
+        {% include "html/icons/body-decor-2.svg" %}
       </div>
 
       <div class="hud__sidebar-right__decor hud__sidebar-right__decor-3">
@@ -90,7 +86,7 @@
     </div>
 
     <div class="hud__footer">
-      <div class="hud__footer__decor__container">
+      <div class="hud__footer__decor__container animated slideInDown delay-1s">
         <div class="hud__footer__decor__row-1 hud__footer__decor__row-center">
           <div class="hud__footer__decor__item">
             {% include "html/icons/top-lines.svg" %}
@@ -109,7 +105,7 @@
   </div>
 
   <div class="hud__container-content">
-    <div class="nav__toggler">
+    <div class="nav__toggler animated fadeIn">
       {{ macroButtonLink.buttonLink(
         '#',
         'data-id=0 data-menu-item-parent',
@@ -332,7 +328,7 @@
     {{ macroButtonLink.buttonLink(
       '#',
       '',
-      'close hud__close',
+      'close hud__close animated fadeIn',
       'html/icons/icon-close.svg',
       'Закрыть',
       'pointer',

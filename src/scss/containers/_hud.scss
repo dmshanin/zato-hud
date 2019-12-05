@@ -256,12 +256,30 @@
 
   .btn-group-control {
     position: absolute;
-    right: 127px;
-    bottom: 305px;
+    right: 87px;
+    bottom: 265px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     overflow: hidden;
+    padding: 40px;
+    transition: height ease $duration-faster;
+    visibility: visible;
+    opacity: 1;
+
+    svg {
+      transition: transform ease $duration-faster, opacity ease-in-out $duration-most-faster;
+      position: relative;
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    &.in {
+      svg {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
 
     .btn {
       + .btn {

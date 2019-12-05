@@ -272,12 +272,12 @@
 
   .btn-info,
   .btn-zoom-out,
+  .btn-rotate-360,
   .btn-catalog {
     position: relative;
   }
 
   .btn-nav-simple,
-  .btn-rotate-360,
   .btn-control,
   &__close {
     position: absolute;
@@ -349,8 +349,8 @@
   .btn-rotate-360 {
     width: 50px;
     height: 50px;
-    right: 127px;
-    bottom: 305px;
+    //right: 127px;
+    //bottom: 305px;
   }
 
   .btn-catalog {

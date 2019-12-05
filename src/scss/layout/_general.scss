@@ -389,3 +389,26 @@ body {
     @extend %animation__opacity__1-075__3;
   }
 }
+
+.hud__header__decor__row-2,
+.hud__footer__decor__row-2 {
+  svg {
+    .path-1,
+    .path-2,
+    .path-3 {
+      transform-origin: left;
+    }
+
+    .path-1 {
+      animation: 3.5s width-09-2 0.3s infinite ease;
+    }
+
+    .path-2 {
+      animation: 5s width-09-2 0.5s infinite ease;
+    }
+
+    .path-3 {
+      animation: 4.5s width-09-2 1s infinite ease;
+    }
+  }
+}

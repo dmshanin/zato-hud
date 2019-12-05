@@ -78,6 +78,24 @@
   }
 }
 
+@keyframes width-09-2 {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 @keyframes width-115 {
   0% {
     transform: scale(1, 1);

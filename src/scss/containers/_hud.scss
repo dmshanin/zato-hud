@@ -459,7 +459,9 @@
 
     .btn__pointer__decor {
       svg {
-        width: 81px;
+        width: 60px;
+        height: 38px;
+        transform: rotate(180deg);
       }
     }
   }
@@ -480,8 +482,27 @@
 
   &-video-player {
     .btn-control {
+      width: 103px;
+      height: 26px;
       right: 312px;
       bottom: 85px;
+
+      .btn__label {
+        margin-top: 7px;
+      }
+
+      .path-1,
+      .path-2 {
+        fill: white;
+        transition: all ease $duration-faster;
+      }
+
+      &.active {
+        .path-1,
+        .path-2 {
+          fill: #1a98ff;
+        }
+      }
     }
   }
 

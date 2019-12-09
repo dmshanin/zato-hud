@@ -5,7 +5,6 @@ const methodStore = {
     const pageSectionEl = document.querySelector(`.page-section`);
     const popupWrapperEl = document.querySelector(`.popup__wrapper`);
     const popupEl = popupWrapperEl.querySelector(targetSelector);
-    const popupOffsetEl = popupWrapperEl.querySelector(`.popup__offset`);
 
     // blurred content section
     pageSectionEl.classList.add('in-blur');
@@ -18,38 +17,42 @@ const methodStore = {
 
     // run animation
     animateCSS(popupWrapperEl, 'fadeIn');
-
-    if (!popupOffsetEl.classList.contains('in')) {
-      popupOffsetEl.addEventListener('click', () => {
-        methodStore.closePopup();
-      });
-
-      // Исключаем дублирвание слушателя
-      popupOffsetEl.classList.add('in');
-    }
   },
   closePopup: () => {
     const pageSectionEl = document.querySelector(`.page-section`);
     const popupWrapperEl = document.querySelector(`.popup__wrapper`);
     const popup = document.querySelector('.popup.in');
-    const listener = () => {
-      // Убираем блюр с контента
-      pageSectionEl.classList.remove('in-blur');
 
-      // Скрываем обертку попапов
-      popupWrapperEl.classList.remove('in');
+    if (popup !== null) {
+      // Скрываем все попапы
+      popup.classList.remove('in');
 
-      // Удаляем слушатель
-      popup.removeEventListener('transitionend', listener);
-    };
+      setTimeout(() => {
+        // Убираем блюр с контента
+        pageSectionEl.classList.remove('in-blur');
 
-    // Вешаем слушатель на окончание анимации
-    popup.addEventListener('transitionend', listener);
-
-    // Скрываем все попапы
-    popup.classList.remove('in');
+        // Скрываем обертку попапов
+        popupWrapperEl.classList.remove('in');
+      }, 800);
+    }
   },
 };
+
+// Close popup
+(() => {
+  const wrapper = document.querySelectorAll('.popup__wrapper');
+
+  wrapper &&
+    wrapper.forEach(item => {
+      const closeBtn = item.querySelectorAll('.popup .btn-close, .popup__offset');
+
+      closeBtn.forEach(item => {
+        item.addEventListener('click', () => {
+          methodStore.closePopup();
+        });
+      });
+    });
+})();
 
 // Menu
 (() => {
@@ -91,69 +94,68 @@ const methodStore = {
 (() => {
   const catalogItemEl = document.querySelectorAll('[data-toggle="popup"]');
 
-  catalogItemEl.forEach(item => {
-    item.addEventListener('click', () => {
-      const targetSelector = item.dataset.target;
+  catalogItemEl &&
+    catalogItemEl.forEach(item => {
+      item.addEventListener('click', () => {
+        const targetSelector = item.dataset.target;
 
-      animateCSS(item, 'pulse');
-      methodStore.openPopup(targetSelector);
+        animateCSS(item, 'pulse');
+        methodStore.openPopup(targetSelector);
+      });
     });
-  });
-})();
-
-// Popups
-(() => {
-  const popups = document.querySelectorAll('.popup');
-
-  popups.forEach(item => {
-    const closeBtn = item.querySelector('.btn-close');
-
-    closeBtn.addEventListener('click', () => {
-      methodStore.closePopup();
-    });
-  });
 })();
 
 // Product presentation tab
 (() => {
   const productPresentationEl = document.querySelectorAll('.product-presentation');
 
-  productPresentationEl.forEach(item => {
-    const btnTab = item.querySelectorAll('[data-target-id]');
-    const tabs = item.querySelectorAll(`.product-presentation__tab`);
+  productPresentationEl &&
+    productPresentationEl.forEach(item => {
+      const btnTab = item.querySelectorAll('[data-target-id]');
+      const tabs = item.querySelectorAll(`.product-presentation__tab`);
 
-    btnTab.forEach(btn => {
-      const tabId = btn.dataset.targetId;
+      btnTab.forEach(btn => {
+        const tabId = btn.dataset.targetId;
 
-      btn.addEventListener('click', () => {
-        tabs.forEach(tab => {
-          tab.classList.remove('active');
+        btn.addEventListener('click', () => {
+          tabs.forEach(tab => {
+            tab.classList.remove('active');
 
-          if (Number(tab.dataset.tabId) === Number(tabId)) {
-            tab.classList.add('active');
-          }
+            if (Number(tab.dataset.tabId) === Number(tabId)) {
+              tab.classList.add('active');
+            }
+          });
         });
       });
     });
-  });
 })();
 
 // Collapse
 (() => {
   const collapseEl = document.querySelectorAll('[data-toggle="collapse"]');
 
-  collapseEl.forEach(item => {
-    item.addEventListener('click', e => {
-      const target = item.getAttribute('href');
-      const targetEl = document.querySelector(target);
+  collapseEl &&
+    collapseEl.forEach(item => {
+      item.addEventListener('click', e => {
+        const target = item.getAttribute('href');
+        const targetEl = document.querySelector(target);
 
-      e.preventDefault();
+        e.preventDefault();
 
-      if (targetEl.classList.contains('in')) {
-        targetEl.classList.remove('in');
-      } else {
-        targetEl.classList.add('in');
-      }
+        if (targetEl.classList.contains('in')) {
+          targetEl.classList.remove('in');
+        } else {
+          targetEl.classList.add('in');
+        }
+      });
     });
-  });
+})();
+
+(() => {
+  const videoControlEl = document.querySelector('.hud-video-player .btn-control');
+
+  videoControlEl &&
+    videoControlEl.addEventListener('click', () => {
+      videoControlEl.classList.toggle('active');
+    });
 })();

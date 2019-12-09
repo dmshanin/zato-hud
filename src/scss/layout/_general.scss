@@ -54,7 +54,8 @@ body {
   border-radius: $border-radius-normal;
   background-color: rgba($blueWhale, 0.9);
   box-shadow: 0 0 100px 50px rgba(white, 0.05);
-  transition: height ease $duration-fast;
+  transition: height ease $duration-fast, opacity ease $duration-fast,
+    visibility ease $duration-fast;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;

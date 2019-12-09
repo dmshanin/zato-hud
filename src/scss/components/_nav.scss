@@ -30,7 +30,6 @@
   &__content {
     z-index: 1000;
     display: none;
-
     @extend %position-absolute-full;
 
     &.in {
@@ -43,7 +42,6 @@
 
     &__link-group {
       @extend %position-absolute-centered;
-      @extend %display-flex-centered;
 
       display: none;
       width: 63%;
@@ -133,21 +131,20 @@
       }
 
       &__level-1 {
-        width: 55%;
+        height: 600px;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        top: 80px;
+        padding: 50px 0;
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: -70px;
-          left: 0;
-          background-color: rgba($blueWhale, 0.75);
-          opacity: 1;
-          box-shadow: 0 0 70px rgba(white, 0.5), 0 0 10px 1px $curiousBlue,
-            inset 0 0 10px 1px $curiousBlue;
-          border: 2px solid white;
-        }
+        width: 55%;
+        background-color: rgba($blueWhale, 0.5);
+        opacity: 1;
+        box-shadow: 0 0 70px rgba(white, 0.5), 0 0 10px 1px $curiousBlue,
+          inset 0 0 10px 1px $curiousBlue;
+        border: 2px solid white;
       }
     }
   }

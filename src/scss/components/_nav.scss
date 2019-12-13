@@ -142,10 +142,10 @@
         width: 55%;
         background-color: rgba($blueWhale, 0.5);
         opacity: 1;
-        box-shadow: 0 0 50px rgba($blueWhale, 0.5), 0 0 30px rgba($blueWhale, 0.5),
-          0 0 10px rgba($blueWhale, 0.5);
+        box-shadow: 0 0 70px rgba($blueWhale, 0.35), 0 0 50px rgba($blueWhale, 0.35),
+          0 0 30px rgba($blueWhale, 0.35), inset 0 0 10px rgba($curiousBlue, 0.35);
         //border: 2px solid white;
-        border-radius: 10px;
+        //border-radius: 10px;
       }
     }
   }

@@ -132,6 +132,15 @@ body {
       }
     }
   }
+
+  &-equipment {
+    width: 1796px;
+    background-color: rgba(white, 0.6);
+
+    &.in {
+      height: 782px;
+    }
+  }
 }
 
 .collapse {

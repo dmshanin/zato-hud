@@ -1,0 +1,24 @@
+$colors-map: (
+  primary: $primary,
+  tory-blue: $toryBlue,
+);
+
+@mixin color-modifiers($property: 'color') {
+  @each $name, $hex in $colors-map {
+    &-#{$name} {
+      #{$property}: $hex !important;
+    }
+  }
+}
+
+.text {
+  @include color-modifiers();
+}
+
+.bg {
+  @include color-modifiers(background-color);
+}
+
+.border {
+  @include color-modifiers(border-color);
+}

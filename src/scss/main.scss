@@ -9,6 +9,9 @@
 @import 'base/extensions';
 @import 'base/utility';
 
+// Миксины
+@import 'mixins/utility';
+
 // Содержит стили для основных компонентов макета, таких как хедер, футер, навигация и т.д.
 @import 'layout/general';
 

@@ -70,29 +70,50 @@
   <div class="popup popup-equipment" data-popup-id="101">
     <div class="popup__content">
       <div class="product-presentation">
+        <div class="product-presentation__header h2 font-weight-bold">
+          <p>ТОГФ-110, 220 (УХЛ1) Трансформаторы тока элегазовые с фарфоровой изоляцией</p>
+          <div class="header-decor">{% include "html/icons/header-decor-1.svg" %}</div>
+        </div>
+
         <div class="product-presentation__content">
           <div class="product-presentation__tab active" data-tab-id="1">
             <div class="product-presentation__model">
               <img src="assets/tmp-1.png" alt="">
-              <div class="product-presentation__name">ВГТ-220ВГТ-220</div>
-              <a href="#" class="product-presentation__rotate-left">{% include "html/icons/icon-arrow-back.svg" %}</a>
-              <a href="#" class="product-presentation__rotate-right">{% include "html/icons/icon-arrow-next.svg" %}</a>
             </div>
           </div>
+
           <div class="product-presentation__tab" data-tab-id="2">
-            <div class="h2">ВГТ-220ВГТ-220</div>
-
-            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
-
-            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
-
-            <p>Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.
-              Разработка и производство электротехнической продукции напряжением 110 — 750 кВ, не имеющей аналогов в РФ.</p>
+            <p class="h2 text-tory-blue">Назаначение</p>
+            <p>Трансформаторы тока серии ТОГФ предназначены для передачи сигнала измерительной информации измерительным приборами и устройствам защиты и управления в открытых и закрытых распределительных устройствах переменного тока частоты 50 Гц на номинальное напряжение 110, 220 кВ.</p>
+            <p>Трансформаторы тока серии ТОГФ предназначены для передачи сигнала измерительной информации измерительным приборами и устройствам защиты и управления в открытых и закрытых распределительных устройствах переменного тока частоты 50 Гц на номинальное напряжение 110, 220 кВ.</p>
           </div>
         </div>
+
         <div class="product-presentation__control">
+          {{ macroButtonLink.buttonLink(
+            '#',
+            'data-target-id=2',
+            'info',
+            'html/icons/icon-info.svg',
+            'Информация',
+            'pointer',
+            [],
+            'html/icons/radial-glow-3.svg',
+            false
+          ) }}
+
+          {{ macroButtonLink.buttonLink(
+            '#',
+            'data-target-id=2',
+            'info',
+            'html/icons/icon-info.svg',
+            'Информация',
+            'pointer',
+            [],
+            'html/icons/radial-glow-3.svg',
+            false
+          ) }}
+
           {{ macroButtonLink.buttonLink(
             '#',
             'data-target-id=2',
@@ -116,11 +137,23 @@
             'html/icons/radial-glow-3.svg',
             false
           ) }}
+
+          {{ macroButtonLink.buttonLink(
+            '#',
+            '',
+            'close hud__close',
+            'html/icons/icon-close.svg',
+            'Закрыть',
+            'pointer',
+            [],
+            'html/icons/radial-glow-3.svg',
+            false
+          ) }}
         </div>
       </div>
     </div>
 
-    {{ macroButtonLink.buttonLink(
+    {#{{ macroButtonLink.buttonLink(
       '#',
       '',
       'close',
@@ -130,7 +163,7 @@
       [],
       'html/icons/radial-glow-3.svg',
       false
-    ) }}
+    ) }}#}
   </div>
 
   <div class="popup popup-project" data-popup-id="2">

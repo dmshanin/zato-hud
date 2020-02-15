@@ -23,6 +23,37 @@
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__control {
+    &-item {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        display: block;
+        width: 36px;
+        height: 36px;
+      }
+
+      &-prev {
+        left: 0;
+        transform: translateX(-100%);
+      }
+
+      &-next {
+        right: 0;
+        transform: translateX(100%);
+      }
+    }
   }
 
   &__list-item {
@@ -86,13 +117,20 @@
         }
       }
     }
+
+    .page-item-icon {
+      .page-link {
+        border: transparent;
+      }
+    }
   }
 
   &-big {
-    $catalog-item-size: 368px;
+    $catalog-item-size: 500px;
     $catalog-item-bg: rgba(#033a52, 80%);
     $catalog-item-radius: $border-radius-normal;
-    $catalog-item-margin: 8px;
+    $catalog-item-margin: 24px;
+    $catalog-item-padding: 40px;
 
     width: $catalog-item-size * 3 + $catalog-item-margin * 6;
     height: $catalog-item-size + $catalog-item-margin * 2;
@@ -103,6 +141,7 @@
       background-color: $catalog-item-bg;
       border-radius: $catalog-item-radius;
       margin: $catalog-item-margin;
+      padding: $catalog-item-padding;
       flex-direction: column;
       cursor: pointer;
 
@@ -111,12 +150,13 @@
       img {
         display: block;
         max-width: 100%;
-        height: 152px;
+        height: 300px;
       }
 
       figcaption {
         display: block;
-        margin-top: 14px;
+        font-size: 150%;
+        margin-top: 24px;
       }
     }
   }

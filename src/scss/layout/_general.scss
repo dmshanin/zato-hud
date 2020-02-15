@@ -61,6 +61,7 @@ body {
   visibility: hidden;
 
   &__content {
+    height: 100%;
     padding: 65px 230px 64px 102px;
   }
 
@@ -100,7 +101,7 @@ body {
     width: 48px;
     height: 47px;
     top: 57px;
-    right: 99px;
+    right: 60px;
 
     .btn__glow {
       transform: scale(1.35);
@@ -134,8 +135,12 @@ body {
   }
 
   &-equipment {
-    width: 1796px;
+    width: 1596px;
     background-color: rgba(white, 0.6);
+
+    .popup__content {
+      padding: 50px 180px 50px 60px;
+    }
 
     &.in {
       height: 782px;

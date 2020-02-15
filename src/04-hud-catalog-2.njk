@@ -53,26 +53,33 @@
     </div>
 
     <div class="hud__container-content">
-      <div class="nav__toggler animated fadeIn" style="display: none;">
-        {{ macroButtonLink.buttonLink(
-          '#',
-          'data-id=0 data-menu-item-parent',
-          'nav',
-          'html/icons/icon-th.svg',
-          'ОТКРЫТЬ МЕНЮ',
-          'pointer',
-          [
-            'html/icons/circle-decor-1.svg',
-            'html/icons/circle-decor-2.svg',
-            'html/icons/circle-decor-3.svg'
-          ],
-          'html/icons/radial-glow-2.svg',
-          'html/icons/pointer-line-1.svg'
-        ) }}
-      </div>
+      {% if false %}
+        <div class="nav__toggler animated fadeIn" style="display: none;">
+          {{ macroButtonLink.buttonLink(
+            '#',
+            'data-id=0 data-menu-item-parent',
+            'nav',
+            'html/icons/icon-th.svg',
+            'ОТКРЫТЬ МЕНЮ',
+            'pointer',
+            [
+              'html/icons/circle-decor-1.svg',
+              'html/icons/circle-decor-2.svg',
+              'html/icons/circle-decor-3.svg'
+            ],
+            'html/icons/radial-glow-2.svg',
+            'html/icons/pointer-line-1.svg'
+          ) }}
+        </div>
+      {% endif %}
 
       <div class="h__pc h__pc-big animated fadeIn">
         <div class="h__pc__list">
+          <div class="h__pc__control">
+            <a href="#" class="h__pc__control-item h__pc__control-item-prev">{% include "html/icons/icon-arrow-back.svg" %}</a>
+            <a href="#" class="h__pc__control-item h__pc__control-item-next">{% include "html/icons/icon-arrow-next.svg" %}</a>
+          </div>
+
           <figure class="h__pc__list-item" data-toggle="popup" data-target="[data-popup-id='101']">
             <img src="assets/tmp-1.png" alt="">
             <figcaption>ВГТ-220ВГТ-220</figcaption>
@@ -90,21 +97,24 @@
         </div>
 
         <ul class="h__pc__pagination">
-          {#<li class="page-item-icon"><a class="page-link" href="#">{% include "html/icons/icon-arrow-back.svg" %}</a></li>#}
+          <li class="page-item page-item-icon"><a class="page-link" href="#">{% include "html/icons/icon-arrow-back.svg" %}</a></li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
           <li class="page-item active"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><span>...</span></li>
+          <li class="page-item"><a class="page-link" href="#">30</a></li>
           {#<li class="page-item-icon disabled"><a class="page-link" href="#">...</a></li>#}
           {#<li class="page-item"><a class="page-link" href="#">30</a></li>#}
-          {#<li class="page-item-icon"><a class="page-link" href="#">{% include "html/icons/icon-arrow-next.svg" %}</a></li>#}
+          <li class="page-item page-item-icon"><a class="page-link" href="#">{% include "html/icons/icon-arrow-next.svg" %}</a></li>
         </ul>
       </div>
     </div>
 
     <div class="hud__container-controls">
-      {{ macroVolumeSwiper.volumeSwiper(47) }}
+      {% if false %}
+        {{ macroVolumeSwiper.volumeSwiper(47) }}
+      {% endif %}
 
       {{ macroButtonLink.buttonLink(
         '#',

@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -142,8 +143,16 @@ body {
       padding: 50px 180px 50px 60px;
     }
 
+    .product-presentation {
+      overflow: hidden;
+    }
+
     &.in {
       height: 782px;
+
+      .product-presentation {
+        overflow-y: auto;
+      }
     }
   }
 }

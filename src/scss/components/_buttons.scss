@@ -31,7 +31,7 @@
     text-align: center;
     position: absolute;
     z-index: 15;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     white-space: normal;
     transition: all ease $duration-faster;
 
@@ -146,9 +146,10 @@
   &.btn-xl {
     > .btn__label {
       font-weight: 500;
-      font-size: 28px;
+      font-size: 26px;
       line-height: 35px;
       padding: 3em;
+      letter-spacing: -0.015em;
     }
   }
 
@@ -177,7 +178,7 @@
 
     .btn__label {
       text-shadow: 2px 2px 20px $curiousBlue, -2px -2px 20px $curiousBlue,
-        -2px 2px 20px $curiousBlue, 2px -2px 20px $curiousBlue, 0 0 3px $blueWhale;
+        -2px 2px 20px $curiousBlue, 2px -2px 20px $curiousBlue, 0 0 3px 3px $blueWhale;
     }
   }
 

@@ -1,4 +1,6 @@
 .product-presentation {
+  text-shadow: none;
+
   &__header {
     margin-top: 0;
     margin-bottom: 3em;
@@ -149,7 +151,6 @@
 
   .popup-equipment & {
     padding: 1px 0;
-    overflow-y: auto;
 
     .product-presentation__content {
       font-size: 30px;

@@ -126,10 +126,10 @@
   }
 
   &-big {
-    $catalog-item-size: 500px;
+    $catalog-item-size: 480px;
     $catalog-item-bg: rgba(#033a52, 80%);
     $catalog-item-radius: $border-radius-normal;
-    $catalog-item-margin: 24px;
+    $catalog-item-margin: 18px;
     $catalog-item-padding: 40px;
 
     width: $catalog-item-size * 3 + $catalog-item-margin * 6;

@@ -9,7 +9,7 @@
   <div class="hud hud-catalog">
     <div class="hud__container-decor">
       <div class="hud__bg">
-        <div class="hud__bg__video" style="background-image: url('assets/bg-product.jpg');"></div>
+        <div class="hud__bg__video" style="background: url('assets/bg-product.jpg') center / contain;"></div>
         <div class="hud__bg__decor-top"></div>
         <div class="hud__bg__decor-bottom"></div>
       </div>
@@ -73,6 +73,18 @@
         </div>
       {% endif %}
 
+      {{ macroButtonLink.buttonLink(
+        '#',
+        '',
+        'nav-simple',
+        'html/icons/icon-th.svg',
+        'меню',
+        'bottom',
+        [],
+        'html/icons/radial-glow-3.svg',
+        false
+      ) }}
+
       <div class="h__pc h__pc-big animated fadeIn">
         <div class="h__pc__list">
           <div class="h__pc__control">
@@ -112,9 +124,7 @@
     </div>
 
     <div class="hud__container-controls">
-      {% if false %}
-        {{ macroVolumeSwiper.volumeSwiper(47) }}
-      {% endif %}
+      {{ macroVolumeSwiper.volumeSwiper(45) }}
 
       {{ macroButtonLink.buttonLink(
         '#',

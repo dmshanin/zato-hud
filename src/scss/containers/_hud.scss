@@ -57,7 +57,8 @@
     }
 
     &__decor-top {
-      background: linear-gradient(0deg, rgba(45, 156, 219, 0) 9.24%, $blueWhale 85.71%);
+      //background: linear-gradient(0deg, rgba(45, 156, 219, 0) 9.24%, $curiousBlue 85.71%);
+      //opacity: .5;
 
       &:before {
         top: -88px;
@@ -66,7 +67,8 @@
     }
 
     &__decor-bottom {
-      background: linear-gradient(180deg, rgba(45, 156, 219, 0) 1.54%, $blueWhale 70.98%);
+      //background: linear-gradient(180deg, rgba(45, 156, 219, 0) 1.54%, $curiousBlue 70.98%);
+      //opacity: .5;
 
       &:before {
         bottom: -76px;
@@ -358,8 +360,9 @@
   .btn-nav-simple {
     width: 39px;
     height: 39px;
-    top: 79px;
-    right: 130px;
+    bottom: 370px;
+    left: 75px;
+    z-index: 2040;
 
     .btn__label__bottom {
       left: -20px;
@@ -367,7 +370,8 @@
       font-weight: 500;
       font-size: 15px;
       line-height: 19px;
-      text-shadow: 0 0 20px $royalBlue;
+      //text-shadow: 0 0 20px $royalBlue;
+      text-transform: uppercase;
     }
   }
 
